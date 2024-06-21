@@ -1,0 +1,251 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DialogueInput" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="774,3078" sap2010:WorkflowViewState.IdRef="DialogueInput_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DialogueInput" sap:VirtualizedContainerService.HintSize="784,3013.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="city_weather" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="722,278" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Input a city name" Title="Check a city weather">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[city_weather]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="722,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;You typed&quot; + city_weather]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Google" sap:VirtualizedContainerService.HintSize="722,2470.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="57878738-f249-4c16-96a8-0e2b27754033" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,2228.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="get_weather_from_city" />
+              <Variable x:TypeArguments="x:String" Name="temp_in_C" />
+              <Variable x:TypeArguments="x:String" Name="temp_in_F" />
+              <Variable x:TypeArguments="x:Int32" Name="temp_int" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA APjFqb'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="626,254.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="57878738-f249-4c16-96a8-0e2b27754033" Text="[city_weather + &quot; weather in C&quot; + &quot;[k(Enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/" CVScreenId="cf91be05-f13c-4eeb-ab57-6a5547b8ee67" CvElementArea="399, 539, 657, 57" CvType="InputBox" DesignTimeRectangle="455, 542, 499, 52" DesignTimeScaleFactor="1.125" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='APjFqb' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='APjFqb' tag='TEXTAREA' type='' class='gLFyf' aaname='Search' /&gt;" Guid="0e25a9a1-6633-47d0-85e2-58236929fdfd" InformativeScreenshot="a0253c2dead44c2f5e97db817e26bd3f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NGetText DisplayName="Get Text In C" sap:VirtualizedContainerService.HintSize="626,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="57878738-f249-4c16-96a8-0e2b27754033" TextString="[temp_in_C]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/search?q=manila+weather&amp;oq=m&amp;gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOTINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDwyBggIEEUYPNIBCDEzNTBqMGoxqAIAsAIA&amp;sourceid=chrome&amp;ie=UTF-8" CVScreenId="29233b94-f545-4f71-b504-943aba745404" CvTextArea="207, 447, 63, 43" CvType="AnyWordGroup" DesignTimeRectangle="209, 436, 61, 67" DesignTimeScaleFactor="1.125" ElementType="Text" FullSelectorArgument="&lt;webctrl id='wob_tm' tag='SPAN' visibleinnertext='' /&gt;" FuzzySelectorArgument="&lt;webctrl id='wob_tm' tag='SPAN' type='' class='wob_t q8U8x' /&gt;" Guid="400257c1-abd4-40ea-b6fe-5758b3f25788" InformativeScreenshot="5cbde6ada454e231005f93c2370ad6d9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='manila weather - Google Search' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="3" DisplayName="Click '°F'" sap:VirtualizedContainerService.HintSize="626,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="57878738-f249-4c16-96a8-0e2b27754033" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/search?q=manila+weather&amp;oq=m&amp;gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOTINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDwyBggIEEUYPNIBCDEzNTBqMGoxqAIAsAIA&amp;sourceid=chrome&amp;ie=UTF-8" CVScreenId="29233b94-f545-4f71-b504-943aba745404" CvTextArea="304, 447, 19, 18" CvTextArgument="°F" CvType="Text" DesignTimeRectangle="306, 448, 18, 20" DesignTimeScaleFactor="1.125" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='°Fahrenheit' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='°Fahrenheit' tag='SPAN' type='' class='' aaname='°F' check:innerText='°F' /&gt;" Guid="81f2eaff-f61d-4b9d-af70-786e6bada9c7" InformativeScreenshot="0c596559d16fb49ec2efaad0b081f02a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='manila weather - Google Search' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text In F" sap:VirtualizedContainerService.HintSize="626,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="57878738-f249-4c16-96a8-0e2b27754033" TextString="[temp_in_F]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/search?q=Ho+chi+minh+weather&amp;sca_esv=49a7afc3c270ff6b&amp;sxsrf=ADLYWIKCBT1UwKjyDca2mV1apr_xTlmN9A%3A1718086390996&amp;source=hp&amp;ei=9upnZtXJOuS4vr0PgLubwAI&amp;iflsig=AL9hbdgAAAAAZmf5Biaf9gWiC4j6G4uBFN7P55QGFQW3&amp;ved=0ahUKEwjVnJvI8tKGAxVknK8BHYDdBigQ4dUDCBU&amp;uact=5&amp;oq=Ho+chi+minh+weather&amp;gs_lp=Egdnd3Mtd2l6IhNIbyBjaGkgbWluaCB3ZWF0aGVyMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCSJABUEVYjAFwAXgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIBoAIHqAIKmAMHkgcBMaAHAA&amp;sclient=gws-wiz" CVScreenId="3a2920c4-28c5-4968-81ce-f9b2e7bc3e36" CvTextArea="208, 378, 63, 45" CvType="AnyWordGroup" DesignTimeRectangle="211, 371, 60, 60" DesignTimeScaleFactor="1.125" ElementType="Text" FullSelectorArgument="&lt;webctrl id='wob_ttm' tag='SPAN' visibleinnertext='' /&gt;" FuzzySelectorArgument="&lt;webctrl id='wob_ttm' tag='SPAN' type='' class='wob_t' /&gt;" Guid="2cff06e9-c13f-4846-af0c-eb3e87166f20" InformativeScreenshot="ae5921c8c730cceb89650d52743928a5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Ho chi minh weather - Google Search' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="626,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[temp_int]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Cint(temp_in_C)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[temp_int &gt;27]" sap:VirtualizedContainerService.HintSize="626,1045.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[get_weather_from_city]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Weather is hot. Who's roasting chicken?</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,680.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:IfElseIfV2 Condition="[temp_int &lt;16]" DisplayName="Else if" sap:VirtualizedContainerService.HintSize="530,596" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
+                    <ui:IfElseIfV2.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[get_weather_from_city]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Cool Weather. Have Fun!"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ui:IfElseIfV2.Else>
+                    <ui:IfElseIfV2.ElseIfs>
+                      <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
+                    </ui:IfElseIfV2.ElseIfs>
+                    <ui:IfElseIfV2.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_4">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[get_weather_from_city]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Things are getting a bit cold</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ui:IfElseIfV2.Then>
+                  </ui:IfElseIfV2>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="626,112" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Your search for city: &quot;+city_weather+&quot; return:&quot; + &quot; Tempature is: &quot; + temp_in_C + &quot; in C and &quot; + temp_in_F + &quot; in F. &quot; + get_weather_from_city]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="622, 21, 1518, 1137" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQZSURBVFhHvVdbbAxhFO6LUJd68ubB3RtCqx6ouC2lDxJVSh/cqiJ4EFQiJZUoSmmCh9alRJpuS2hVUSmlLm0UkRVpg1JU2+xut7edXXub45wx3ew//8zOjIhJTnYyc875vv/c5mxMjMFLFMU4lA2hUOgSSjNKD4pfFqf87BLqpJOuQbf6auhsOjovQfGCwQt1PSiX0XaqPoKGBmKNRCcFKEGDuJwa2gZQTiGRWFNE0GAaGn74W2ClHfqyoc8phkig4mw0cKiBBzs7QCi9An37doJz7QqwW+aBfVkiONdYoHfvDhCuFUOw47sqb/RpxxezopKQT86BB7t+Qn/uQbAvnQv2JQnRBXX6jxwAslGJhF0zEvhilFrYvQ9rwLEqSR9YQcyRshB+1T9UI0Hp4GuCCk6pLZRdNQ0cGaGB/FytdOQzqZBbjal2OrlWuF2Z6eC+eA68d2+Bt+Y23p8H1/YNjP7AmTwAUdQiEGBSQX0eqUnF5li5gCPQk7EafK+bNJvD19wIzvUpMHj+tG4D0UCTooCaY5VDxl24mwPv3bUZxIEBXcei4NbVIQXEFDAKY2JovEZaiJ42CNQOh/7sCWES1HKhPpchx2aUEHtdDIUi0ij0NQ8CdcMkEc6NA0dyPHgfVJvxa1gXsYuIQDOT/zeWMAEi4bs1ESAQMOzUjCJiNxGBnkijQMN4hkDwfXpUn4uPucGo1H9gD0LTkQj4GQKPhjMEQp9z/hmB0hcMFBWi778SKHnqYw4zRMAZNQW29f8sAhVNXASkFLBF+HY5k4KOhhngD5kvwi/2EFcbT1u4GpCKUNGGJ8IEqmsmwnzraqhsqzNT3JKutdHPEejqY0ez1Ia0w7GD6Ct46mIhr3IOxFvXSGKp3AJOb69hEoNeEVILBYbApiIPZ4/YaUQgjna4yLdnG4+GwYdIZNTuhz6f/ij24yctu8zLnb6cz7+AmKOl7wEtkJEEOt12SLq5kSORcicLGn6+1ozEx9522FplRfB+hgBFw+Pjwl8c/iTT9koLZKTn++0NHIGhaKTe2wMFb0ug4uN9uPHpAVywlcK2ukOQYE2VbBKvZsOikz/CJJ61snstzR7EnMzsBLS9Ko92vbVKk8QQGa3fhNJNkHTmFSh7X/4SHud2Q3xBa/h7JYnab88xHRmmiSSWp8FFWxWXLsR4hw9HqC6ntKXI2ytj2CU44NDLszC3/E+I9STr8WFocbWpgXfjw0lRN2NUmKVGgrxRcV5ruQ27nhyF5KpMmFeRBnRSS+VWyHyUI9VCq+uLapGiz2484Eyj/w0oEjbDja+jKIc9+smVzGh1RsN8ZXeYIUXVjnJcM+dGwiHXBf0jpsFh6CJdlGKu1YwAaunQAkk7HM1v2mSoTuhzKgvd07MiGq/hCWcA8Deh4X828TIQLAAAAABJRU5ErkJggg==" InformativeScreenshot="f21b000eed04b9d7d9b7a2a3e0f95946.jpg" Selector="&lt;html app='msedge.exe' title='Google' /&gt;" Title="Google" Url="https://www.google.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

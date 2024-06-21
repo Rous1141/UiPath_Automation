@@ -1,0 +1,12 @@
+﻿{
+  "Name": "notepad - Search Results in Home",
+  "Type": "App",
+  "Id": "ri9dBMai7UOSRgAtngC9EA",
+  "Reference": "yx_rPfNFIEq1I7uTwMhotQ/ri9dBMai7UOSRgAtngC9EA",
+  "Created": "2024-06-10T03:39:09.706379Z",
+  "Updated": "2024-06-10T03:39:09.706379Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.4.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,148 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="574,1048.6666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,984" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge 7 Different Data Table Examples on Websi" sap:VirtualizedContainerService.HintSize="450,896" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="56359f56-d8a0-4e54-a0c5-a38b70076ad5" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,654" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="x:String" Name="table_as_text" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data 'Extract Table Data'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search First name' ReferenceIdx='0' Name='Search First name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search First name Url' ReferenceIdx='1' Name='Search First name Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Last Name' ReferenceIdx='2' Name='Search Last Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Last Name Url' ReferenceIdx='3' Name='Search Last Name Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Position' ReferenceIdx='4' Name='Search Position'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Position Url' ReferenceIdx='5' Name='Search Position Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Office Branch' ReferenceIdx='6' Name='Search Office Branch'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Office Branch Url' ReferenceIdx='7' Name='Search Office Branch Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Age' ReferenceIdx='8' Name='Search Age'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Age Url' ReferenceIdx='9' Name='Search Age Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Salary' ReferenceIdx='10' Name='Search Salary'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Search Salary Url' ReferenceIdx='11' Name='Search Salary Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Search First name' attr='fulltext' name2='Search First name Url' attr2='href' /&gt;&lt;column name='Search Last Name' attr='fulltext' name2='Search Last Name Url' attr2='href' /&gt;&lt;column name='Search Position' attr='fulltext' name2='Search Position Url' attr2='href' /&gt;&lt;column name='Search Office Branch' attr='fulltext' name2='Search Office Branch Url' attr2='href' /&gt;&lt;column name='Search Age' attr='fulltext' name2='Search Age Url' attr2='href' /&gt;&lt;column name='Search Salary' attr='fulltext' name2='Search Salary Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="354,192" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="56359f56-d8a0-4e54-a0c5-a38b70076ad5" Version="V3">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://ninjatables.com/examples-of-data-table-design-on-website/" CVScreenId="3b916eac-fe7e-4452-b520-452ebd5b8bf2" CvElementArea="1160, 945, 44, 52" CvTextArea="1176, 957, 10, 21" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1160, 947, 45, 50" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='footable_17874' tag='TABLE' /&gt;&lt;webctrl aria-label='next' tableRow='13' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='footable_17874' tag='TABLE' /&gt;&lt;webctrl aria-label='next' type='' tag='A' class='footable-page-link' aaname='›' check:innerText='›' /&gt;" Guid="a4cf229d-a6a2-45c2-8483-45dc3c29f713" ScopeSelectorArgument="&lt;html app='msedge.exe' title='7 Different Data Table Examples on Websites' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://ninjatables.com/examples-of-data-table-design-on-website/" ContentHash="_gjZSkcUiEq9OTJ3fy9pkg" DesignTimeRectangle="101, 97, 1240, 958" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl id='footable_17874' tag='TABLE' /&gt;" Guid="add0ffb6-ca80-479e-a6fd-92ef546ccfae" InformativeScreenshot="f2b657f435788931e9068300824486ac.png" Reference="EZ9nLnJusUicDw7NeboCNg/jOgbEQVydUG_nKTNZXBAyA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='7 Different Data Table Examples on Websites' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Output\TableFromTheWeb.xlsx" />
+            <ui:OutputDataTable DataTable="[ExtractDataTable]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[table_as_text]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,109.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[table_as_text]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="72, 3, 1524, 1140" BrowserType="Edge" ContentHash="vxiwN4GZlUym4V2f2BbPPQ" IconBase64="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" InformativeScreenshot="6a57a8f72d1ac1f9b31b5371e6a816c7.jpg" Reference="EZ9nLnJusUicDw7NeboCNg/JXBovOcNx0uUx9AVOfIpTQ" Selector="&lt;html app='msedge.exe' title='7 Different Data Table Examples on Websites' /&gt;" Title="7 Different Data Table Examples on Websites" Url="https://ninjatables.com/examples-of-data-table-design-on-website/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

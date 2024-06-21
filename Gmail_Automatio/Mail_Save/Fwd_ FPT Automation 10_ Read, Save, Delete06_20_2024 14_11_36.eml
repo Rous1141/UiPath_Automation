@@ -1,0 +1,145 @@
+Delivered-To: baondgse171697@fpt.edu.vn
+Received: by 2002:a05:7208:3087:b0:87:a6b5:82d0 with SMTP id d7csp143292rba;
+        Wed, 19 Jun 2024 21:29:56 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWcg7rq8K8TlRDBrowkkjI+TnZMyNo5590mkcuJiDiTLqo8h1AAiJGRBu/jMfNTog2517INq+Pb0FP7ly7AW825jBIhVqrQ4oX4
+X-Received: by 2002:a17:906:b357:b0:a6f:878e:d6f8 with SMTP id a640c23a62f3a-a6fab7d0bf6mr242267366b.70.1718857795832;
+        Wed, 19 Jun 2024 21:29:55 -0700 (PDT)
+Return-Path: <luonglvse160810@fpt.edu.vn>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-a6f56f20b37sor446455466b.7.2024.06.19.21.29.55
+        for <BaoNDGSE171697@fpt.edu.vn>
+        (Google Transport Security);
+        Wed, 19 Jun 2024 21:29:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of luonglvse160810@fpt.edu.vn designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@gmail.com header.s=20230601 header.b="jyCta/fL";
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of luonglvse160810@fpt.edu.vn designates 209.85.220.41 as permitted sender) smtp.mailfrom=luonglvse160810@fpt.edu.vn;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=fpt.edu.vn
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1718857795; x=1719462595;
+        h=to:subject:message-id:date:from:htmlbody:uid:mime-version
+         :dkim-signature:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=EZjJa8wYJ5XUX3dswiNyA8DTAL6AuIVGcgpbUyuGjZw=;
+        b=cVtTD90setiHm/+gRF8pR6xyThgoBfranMRZ30R9mXaTDqUjPQirZwZdpXBPvuuWUQ
+         TZ1h22q9L3h3K6UC8VCJhFuQT2skVjXxA9C3KF9+QNVd4ChMNnEy1myuiKAcWJgSimr3
+         g7kU00rodVPZodwewV4oe5oyiuvDUttage3UwQutNyr067DQeQZf1RZgP/DNLT0op6B/
+         T4rBSB35wDUXheoRMZdqJQ6bayOe7uJdjb9WahWv3Car6o3bA96ZhED6VJLNRdqkoHcI
+         pi3LXL5voL8KcyOu8axMZVWHxi6OmD9PoX/YkKIgvEJVyiXLxdJ8Pn4IZWuATtFXjdoJ
+         7wZg==
+X-Forwarded-Encrypted: i=2; AJvYcCWjMyGxdiQO9t1uvHKNETOLQN/spCq49Holy1s4U/xdjP3Zie9Zov78aQclYgaj5yzNWCE+Dh6yk330/DaDEOii9VdLSuNT3oOz
+X-Gm-Message-State: AOJu0YxsptwDBE7tbJ1RTWzCaTJXLSWfc5n80OPrFnZVrmHuTKUbB10H
+	s7MC8vPMSZiTJGhRnF26+Y+abA+jlGGz04LEWm0VnN3SkDlwofttzk4EijUViY2RJDW6JXGwmsV
+	ND3oMQwvuAPqhakZvjPEbhDi913uyoNaeVufNqDw=
+X-Received: by 2002:a17:906:11cb:b0:a6f:1b40:82ab with SMTP id
+ a640c23a62f3a-a6fab7d6c27mr234587866b.76.1718857795276; Wed, 19 Jun 2024
+ 21:29:55 -0700 (PDT)
+Received: from 1087538024966 named unknown by gmailapi.google.com with
+ HTTPREST; Wed, 19 Jun 2024 21:29:55 -0700
+Received: from 1087538024966 named unknown by gmailapi.google.com with
+ HTTPREST; Thu, 20 Jun 2024 00:29:54 -0400
+Received: from 303189250761 named unknown by gmailapi.google.com with
+ HTTPREST; Wed, 19 Jun 2024 22:27:26 -0500
+X-Forwarded-Encrypted: i=1; AJvYcCVoJscVcfKpn+Rcid1WhKyngr++c2wWgPQuNTnz4+R0184pO+RyUQ6Y3qu9QS2c3++XNPlZ/qFBZ0GFGsfmS7DBKnbfZTcG67FKDquarL5+bvWjGwOyDzAtP7lDyyIWLXOdabkn4feSrKtF432sUOW3BUOGN1cv8zh6MdmZBn++0hhgIzjtvF14Df3egiy1mTr1fHpHnfEFBM7awGSL7wWMki6hIX5hBunu9e17SYiwPrCUgt8YCzA+m5kWFtqjMBfwlU5U+ocQKd4a4UY6Odrhm18rfA5cHk0OixH/t45UOx0n2VH0aU3j1qwyocHBZe8wfb6rdIKPIzVbofq9GK9hfOR8OaNaWeIA4ht0FUhxDmO4wFDC821vy96jVONJ2vUYEjA=
+X-Received: by 2002:a05:6870:bb11:b0:251:109:98f4 with SMTP id
+ 586e51a60fabf-25c94d5bfd5mr4824420fac.47.1718854047460; Wed, 19 Jun 2024
+ 20:27:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718854048; cv=none; d=google.com;
+ s=arc-20160816; b=MgpveEldbMLxmQhddprBd1fhsCemg2Q428yEYd/uSJT+4rhQ0FATu3fYUitm0apC3zF4A+X4cCH
+ FLMw44BbMFBrp6kfz5PmHQPDo8WQChN2oG3q1e7AQW/ktqL8lBuvsT/JgTdhwxWxKSQQRWTupyLjL
+ 4eYA87Y5SfBiy3sa88voU28HEmEGeNBRCXBWwIyOmF9Mc+bFiKWECZLpnRnrQG5MbDrZKMZ6uSy86
+ yZcuXAqguhhIu8pQ5zCazKbC1Zh9oNIcHmYEKMjjMTZePI80e52gbA3GUMRwl1jPABV22THyLw0iA 41pp4CMyFs3lS9HNMtt68h+Se2zSNxgPlmhQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816; h=to:subject:message-id:date:mime-version:from:dkim-signature;
+ bh=zwZV7BJrw2TvvGwnk+Ra540IKH5iu9uwA6KEfEkRK1I=; fh=GTFa433wmj4oYag3vWNZi4Lk+ewvHuqrtKRfc/cqgn0=;
+ b=WOX1N3vafUVvwIaMputo+W6XoB4npx1w9n43KyJJN0NYFXqvbYvWX3sgoRUfyGotR7AwXxTKXXG
+ pXxYa6AFIencIkGlUkoVQyuk3RL59LtdgpquYPQ3eZZlhsiOGpYfAaXxNsfsAMM9q/R6nJT/fipFW
+ Bpt+Op/KHF5+Y/3hICwE4piZimiV3JLdeIzEs9LhAkpM7zzi6iXSwZ7P9SdI316JjSBT1W8nJgGRf
+ Rvy9JhnYlgxfEzwCxsAoyTtdb31affoBIwq0URQG5AKxOHCEl86qsJPVIJkwavqkjbVzNxL41iwd8
+ gHVKjaJD3saRfX1MS0ckJ3S1/0V1ROPX4EXg==; dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass header.i=@gmail.com
+ header.s=20230601 header.b="jyCta/fL"; spf=pass (google.com: domain of
+ jelizabolleser@gmail.com designates 209.85.220.41 as permitted sender)
+ smtp.mailfrom=jelizabolleser@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE
+ dis=NONE) header.from=gmail.com
+Return-Path: <jelizabolleser@gmail.com>
+Received-SPF: pass (google.com: domain of jelizabolleser@gmail.com designates
+ 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20230601;
+ t=1718854047; x=1719458847; darn=fpt.edu.vn; h=to:subject:message-id:date:mime-version:from:from:to:cc:subject:date:
+ message-id:reply-to; bh=zwZV7BJrw2TvvGwnk+Ra540IKH5iu9uwA6KEfEkRK1I=;
+ b=jyCta/fLuKlHgPPT9xeLtprkibcXJX9HQ6wOtT1YokmwfczWE8U7iz5hwvycZQM0cTdGI2dgY6/
+ mhPwubpWpNWPHZTDtgX5sN4m54X/+4r9vj05wNeTBkQgkC7TokmgLgPDUJzFhz5zpLyrcrB2g+xVm
+ xPPmL0jO7S28pppAFix1bDDl3cQeGy7weT9Zr6rx+BYM2xlvcHQ9Umy8ns2XiQucKLbToHFV/CtjH
+ H85hS3EXquSbV8NyAtm0WHJUi+zilnt3GGffRKdfy9b2SDG5qmPDNsYF61fZ6B3Jvq7YRl3PE+/Rn VdBM15xJQiP227idDMogKzXyw5TF3o47TXgw==
+X-Google-Smtp-Source: AGHT+IHL/PTmsl/CfiheNT0ZWjwTArxs6deR9SNahftDpCEStahWzuI0g/fbo7Dqx6U4TfzpBWshfqjoUyPJLr60jc4=
+MIME-Version: 1.0
+Uid: 19033af59099b428
+HtmlBody: <html><head></head><body><P><SPAN>Le^u Le^u</SPAN></P><p><br>----------
+ Forwarded message ---------<br>From: Jeliza Bolleser &lt;jelizabolleser@gmail.com&gt;<br>Date:
+ Wed, 19 Jun 2024 22:27:27 -0500<br>Subject: FPT Automation 10: Read, Save,
+ Delete<br>To: &lt;DanhCCSE172215@fpt.edu.vn, KhaiDTSE172498@fpt.edu.vn,
+ KietKVSE160864@fpt.edu.vn, MinhLTBSE173370@fpt.edu.vn, LuongLVSE160810@fpt.edu.vn,
+ BaoNDGSE171697@fpt.edu.vn, HungNMSE172371@fpt.edu.vn, AnhPLQSE170529@fpt.edu.vn,
+ TienTNSE172154@fpt.edu.vn, LongVTSE172754@fpt.edu.vn&gt;<br></p><html><head></head><body>Hello
+ All,<br><br>Use UiPath to read, save then delete this email.<br><br>Happy automation!<br><br>Regards,<br>Jelai</body></html></body></html>
+From: luonglvse160810@fpt.edu.vn
+Date: Wed, 19 Jun 2024 21:29:55 -0700
+Message-ID: <CABVvG=YtqeTWmJLxkLnhyxLSeetFXacTPLq-u86pCZ4ogfjhug@mail.gmail.com>
+Subject: Fwd: FPT Automation 10: Read, Save, Delete
+To: DanhCCSE172215@fpt.edu.vn, KhaiDTSE172498@fpt.edu.vn, 
+	KietKVSE160864@fpt.edu.vn, MinhLTBSE173370@fpt.edu.vn, 
+	LuongLVSE160810@fpt.edu.vn, BaoNDGSE171697@fpt.edu.vn, 
+	HungNMSE172371@fpt.edu.vn, AnhPLQSE170529@fpt.edu.vn, 
+	TienTNSE172154@fpt.edu.vn, LongVTSE172754@fpt.edu.vn
+Content-Type: multipart/alternative; boundary="0000000000004eb300061b4ac4db"
+
+--0000000000004eb300061b4ac4db
+Content-Type: text/plain; charset="UTF-8"
+
+Le^u Le^u
+
+
+---------- Forwarded message ---------
+From: Jeliza Bolleser <jelizabolleser@gmail.com>
+Date: Wed, 19 Jun 2024 22:27:27 -0500
+Subject: FPT Automation 10: Read, Save, Delete
+To: <DanhCCSE172215@fpt.edu.vn, KhaiDTSE172498@fpt.edu.vn,
+KietKVSE160864@fpt.edu.vn, MinhLTBSE173370@fpt.edu.vn,
+LuongLVSE160810@fpt.edu.vn, BaoNDGSE171697@fpt.edu.vn,
+HungNMSE172371@fpt.edu.vn, AnhPLQSE170529@fpt.edu.vn,
+TienTNSE172154@fpt.edu.vn, LongVTSE172754@fpt.edu.vn>
+Hello All,
+
+Use UiPath to read, save then delete this email.
+
+Happy automation!
+
+Regards,
+Jelai
+
+--0000000000004eb300061b4ac4db
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><p><span>Le^u Le^u</span></p><p><br>---------- For=
+warded message ---------<br>From: Jeliza Bolleser &lt;<a href=3D"mailto:jel=
+izabolleser@gmail.com">jelizabolleser@gmail.com</a>&gt;<br>Date: Wed, 19 Ju=
+n 2024 22:27:27 -0500<br>Subject: FPT Automation 10: Read, Save, Delete<br>=
+To: &lt;<a href=3D"mailto:DanhCCSE172215@fpt.edu.vn">DanhCCSE172215@fpt.edu=
+.vn</a>, <a href=3D"mailto:KhaiDTSE172498@fpt.edu.vn">KhaiDTSE172498@fpt.ed=
+u.vn</a>, <a href=3D"mailto:KietKVSE160864@fpt.edu.vn">KietKVSE160864@fpt.e=
+du.vn</a>, <a href=3D"mailto:MinhLTBSE173370@fpt.edu.vn">MinhLTBSE173370@fp=
+t.edu.vn</a>, <a href=3D"mailto:LuongLVSE160810@fpt.edu.vn">LuongLVSE160810=
+@fpt.edu.vn</a>, <a href=3D"mailto:BaoNDGSE171697@fpt.edu.vn">BaoNDGSE17169=
+7@fpt.edu.vn</a>, <a href=3D"mailto:HungNMSE172371@fpt.edu.vn">HungNMSE1723=
+71@fpt.edu.vn</a>, <a href=3D"mailto:AnhPLQSE170529@fpt.edu.vn">AnhPLQSE170=
+529@fpt.edu.vn</a>, <a href=3D"mailto:TienTNSE172154@fpt.edu.vn">TienTNSE17=
+2154@fpt.edu.vn</a>, <a href=3D"mailto:LongVTSE172754@fpt.edu.vn">LongVTSE1=
+72754@fpt.edu.vn</a>&gt;<br></p><html><head></head><body>Hello All,<br><br>=
+Use UiPath to read, save then delete this email.<br><br>Happy automation!<b=
+r><br>Regards,<br>Jelai</body></html>
+</body></html>
+
+--0000000000004eb300061b4ac4db--

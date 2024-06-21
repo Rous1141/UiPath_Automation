@@ -1,0 +1,103 @@
+Delivered-To: baondgse171697@fpt.edu.vn
+Received: by 2002:a05:7208:3087:b0:87:a6b5:82d0 with SMTP id d7csp126438rba;
+        Wed, 19 Jun 2024 20:27:23 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCX9NY4l58PPOMkN5cDTH1wRMDYSumCIEOOARjBABspt2343DBmR7vmmPlnocv5KgsIk7rq/4f9q7uYRqQv1TQ4ik9nx4oyYYAXu
+X-Received: by 2002:a9d:5a15:0:b0:6f9:a404:b40e with SMTP id 46e09a7af769-70073a3fe8bmr4834262a34.9.1718854043144;
+        Wed, 19 Jun 2024 20:27:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718854043; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oEIgn+Iw2KtVhaQ1VkW44SdyDjPII+Ydpo0cRPYcW4BO/Yn60rcFigQcwuudP9h6BH
+         ukdbQL9as58jeIVdPNdrzQDLWhuf+30Xml5I+BGgWS5ZwgnBv2MXC5bSsHtDuLy9FhEd
+         29vTQL3W+Xlla48SIjdj4XWwtQRlojKiWE8FJiAWob1BwMTi6UvsHFTzLTObLVVn1emw
+         LZMdpDZU3DVTqCKvk40soVdyTmNx2cwRsJpJAqnDp4r6xeNttC+LsQWtZ534B40FHmK+
+         9dIyfr+nrwjU+Q2McXmfIbd+Pd5m09D1fp5/ZM3uHd2n31v0t3wyB2iTM7HBq4jjKUyj
+         ++qg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:mime-version:from:dkim-signature;
+        bh=/UXqrpj5aAoI26CEh6onl9/NJW4p/DlKo/QDwLA8Jm0=;
+        fh=Boxfh6rHacu6KqoSmpicg8kgZalURf6WB0Eac9H0YSA=;
+        b=v+E62XIzJsma0gTmuq9fdyZ0x3jfzSybEEHYRlQN6gkmKFIeWHZBJZMJag2DHg05rS
+         IamLSV85QJma4igRV3MqSrk+6MA8x8AXMQP+XuM0a6xSRRs4iJe11XWcoLn6xtsouuqV
+         Ttlw3JkFzTnGEsal4GEO1+gUkK1Cb8Uj4UAYr12+mXh4INHCF9vNZ3HNyRZM5dA1Yqxn
+         lpTfJPRaZF1TMSTnyPDWbbdvGJ8FTC1cAD3avmb5gzF2rX54UEtiE+h2W46P+4WRN5aE
+         +XiwBvkEi5vjh9eTdPb3otYNEZtna6W61LkWUFUC+Ft00voXBOvVzkDkJGq9Gq6Cx1l+
+         OEQg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=GApyx4ch;
+       spf=pass (google.com: domain of jelizabolleser@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jelizabolleser@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <jelizabolleser@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 46e09a7af769-6fb5afab863sor5105115a34.3.2024.06.19.20.27.22
+        (Google Transport Security);
+        Wed, 19 Jun 2024 20:27:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jelizabolleser@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=GApyx4ch;
+       spf=pass (google.com: domain of jelizabolleser@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jelizabolleser@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1718854042; x=1719458842; darn=fpt.edu.vn;
+        h=to:subject:message-id:date:mime-version:from:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=/UXqrpj5aAoI26CEh6onl9/NJW4p/DlKo/QDwLA8Jm0=;
+        b=GApyx4chrcGz0ilReWOOTlrRKCkuuD8sKPomS2JZdVi7pehJsMrHEtgxrXTMEzU90w
+         yvYHabO9+OtQO2ClYz4yVwiN+lIhJxN1SecANcmxl0WMbfnCInl/w+gd8QHFKYQmDl1s
+         sylrBnfWFCu1XUzXA+YyERt+woq1wRUsZEFUMkzB1490FfdvRKyOzw9EkZcgGQszxq6J
+         PpHrbWr5dO6GMwNBHYgS7Gueq/t6C39xAggalwboN1onsbCw4z3o1c5aeGYG4RwCSQAm
+         b9qesOR6WtO1Lz2be4moOHsH5YYqqKGApDdu7kI5EERD25v3pe/qD3JN6UvqutBsLJsw
+         Ij7Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1718854042; x=1719458842;
+        h=to:subject:message-id:date:mime-version:from:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=/UXqrpj5aAoI26CEh6onl9/NJW4p/DlKo/QDwLA8Jm0=;
+        b=j3W/OB8UD37/QpVSDorQdisrYBvR4LHdlX82xtvWUHC0OHK+TUE7vX3B0FAlDRGhOY
+         u8Ka0pGyUl8/FkZzH4Gpt74JqolFmZZ0rFayr+820dTgpgUQdl2heVpRLRWUM3gqt9yt
+         dMiY1wSNoEYxubcl4iiQ5wyT9/SPXjz/SeyHfJbb7kr4/cFXCxFq+S4Rg3/g2znvsj6d
+         EB6Ygoe5Rs6KEtm0MFEEU0hSBnw6kD0/KbdiulVlBuTcuEIh5XoC4+IW244I7TXRL1Mb
+         F76YZsJ+gBJI0qVM/jNMu11uI5Qx7/TthAptJeOeCvwr8bOULfd8M90pya4xz33HsGx8
+         v8Cw==
+X-Forwarded-Encrypted: i=1; AJvYcCXvUxq7GZh0m3/w6AFcuMXGm9Ad14f7gCOB/o+I6kWksSQzYNX+apPEqeBW4lpEmPtn063GWsWL9JSuZAjs8ub/xe9jVy4uxpUvh0zvZ6LFSSm/XsDT6Umz1quQnPa9KVtf3LP0i8q2FHJwemfzjHaFgnNwnl9Uer0HEnp+7NX+kMMDhAUEe2WdGjL1nu8wJGPlnoZO+YwRs9LGpCAa+APawGPzYAMv05BsTlcW4pf4ONjjJk7v+LBb2jyRDZ05ZudsnoMh9WVZD2K2woxb8uWk7txzBgB9ReCCYFD0lCMPR4MKeE3H9gj3Gv2UEoD9C9wn7z+KmdDbAdIVFhDB+IzdegrTuRSIks7qiaN4+ta/PJFhvG1vbXklPjQccBPiNwXIL8w=
+X-Gm-Message-State: AOJu0Yykt5dvqMQ3qK4dyKN1tJHFgRpsvUyKzBaXq/+LF33esvngIIsy
+	+Lu6P3eXlYPfPAi3GTHeXYok/4A/H97pGJa5in4ilwaInrXh30p/BFYM0a3S+4gfE81At0miY4G
+	MaPyoLc/xYOr2HpmrVH1usyIsWtrz61ar
+X-Google-Smtp-Source: AGHT+IHcvpKlYvP705zdYk71wVq9dAYYamUy3Lke7s3G/9yfQ+Pg1x59KY+bdEW9DZA368CQOvpyL8C6T/LsRQek1rY=
+X-Received: by 2002:a05:6830:1302:b0:6f9:89ca:fbe3 with SMTP id
+ 46e09a7af769-700740189f2mr5004189a34.17.1718854042617; Wed, 19 Jun 2024
+ 20:27:22 -0700 (PDT)
+Received: from 303189250761 named unknown by gmailapi.google.com with
+ HTTPREST; Wed, 19 Jun 2024 22:27:22 -0500
+Received: from 303189250761 named unknown by gmailapi.google.com with
+ HTTPREST; Wed, 19 Jun 2024 22:27:22 -0500
+From: Jeliza Bolleser <jelizabolleser@gmail.com>
+MIME-Version: 1.0
+Date: Wed, 19 Jun 2024 22:27:22 -0500
+Message-ID: <CAKAbzNHnd_C9VwjkiPMXFAsgYbtMpMdyFfCLAcNkkb4jN5dN0Q@mail.gmail.com>
+Subject: FPT Automation 7: Read, Save, Forward
+To: DanhCCSE172215@fpt.edu.vn, KhaiDTSE172498@fpt.edu.vn, 
+	KietKVSE160864@fpt.edu.vn, MinhLTBSE173370@fpt.edu.vn, 
+	LuongLVSE160810@fpt.edu.vn, BaoNDGSE171697@fpt.edu.vn, 
+	HungNMSE172371@fpt.edu.vn, AnhPLQSE170529@fpt.edu.vn, 
+	TienTNSE172154@fpt.edu.vn, LongVTSE172754@fpt.edu.vn
+Content-Type: multipart/alternative; boundary="000000000000a18c70061b49e423"
+
+--000000000000a18c70061b49e423
+Content-Type: text/plain; charset="UTF-8"
+
+Hello All,
+
+Use UiPath to read, save and forward
+
+Happy automation!
+
+Regards,
+Jelai
+
+--000000000000a18c70061b49e423
+Content-Type: text/html; charset="UTF-8"
+
+<html><head></head><body>Hello All,<br><br>Use UiPath to read, save and forward<br><br>Happy automation!<br><br>Regards,<br>Jelai</body></html>
+
+--000000000000a18c70061b49e423--

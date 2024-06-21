@@ -1,0 +1,80 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "city_weather&",
+        "get_weather_from_city&",
+        "temp_in_C&",
+        "temp_in_F&",
+        "temp_int&"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "google_edge&Sequence_2",
+        "google_search&Sequence_2",
+        "goto_yuri&Sequence_2",
+        "search_variable_01&Sequence_6",
+        "savedText&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "argument1",
+        "Ibaraki",
+        "Arg01"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence02.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence03.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Flowchart.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "city_weather&Sequence_2",
+        "get_weather_from_city&Sequence_3",
+        "temp_in_C&Sequence_3",
+        "temp_in_F&Sequence_3",
+        "temp_int&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DialogueInput.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "city_weather&Sequence_1",
+        "get_weather_from_city&Sequence_2",
+        "temp_in_C&Sequence_2",
+        "temp_in_F&Sequence_2",
+        "temp_int&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

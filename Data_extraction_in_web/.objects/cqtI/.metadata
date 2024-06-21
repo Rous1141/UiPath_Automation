@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge 7 Different Data Table Examples on Websites",
+  "Type": "App",
+  "Id": "cqtIb2g3J061MTKz5-ubkw",
+  "Reference": "EZ9nLnJusUicDw7NeboCNg/cqtIb2g3J061MTKz5-ubkw",
+  "Created": "2024-06-13T05:27:54.7006527Z",
+  "Updated": "2024-06-13T05:27:54.7006527Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

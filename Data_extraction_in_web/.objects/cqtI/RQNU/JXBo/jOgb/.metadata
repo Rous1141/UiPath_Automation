@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Extract Table Data",
+  "Type": "Element",
+  "Id": "jOgbEQVydUG_nKTNZXBAyA",
+  "Reference": "EZ9nLnJusUicDw7NeboCNg/jOgbEQVydUG_nKTNZXBAyA",
+  "ParentRef": "EZ9nLnJusUicDw7NeboCNg/JXBovOcNx0uUx9AVOfIpTQ",
+  "Created": "2024-06-13T05:27:55.4950059Z",
+  "Updated": "2024-06-13T05:27:55.4950059Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

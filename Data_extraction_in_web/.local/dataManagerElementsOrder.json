@@ -1,0 +1,60 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "table_as_text&Sequence_2",
+        "ExtractDataTable&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_output&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Excel Writing.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "excelFile&Sequence_1",
+        "table_row&Sequence_2",
+        "row_index&Sequence_1",
+        "row_count&Sequence_2",
+        "dt_output&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Filter.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "tb_sorted_by_state&Sequence_1",
+        "current_index&Sequence_2",
+        "row_index&Sequence_1",
+        "tb_output&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
