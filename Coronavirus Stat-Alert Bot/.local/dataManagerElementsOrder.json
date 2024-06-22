@@ -1,0 +1,51 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1",
+        "InputName&Sequence_1",
+        "ExtraDataTable&Sequence_11",
+        "ExtractDataTable&Sequence_23",
+        "Total&Sequence_9",
+        "TotalDeaths&Sequence_9",
+        "TotalCases&Sequence_9",
+        "TotalRecovered&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence02.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "current_index&Sequence_5",
+        "list_of_emails&Sequence_3",
+        "InputName&Sequence_1",
+        "ExtractDataTable&Sequence_2",
+        "ExtractDataTable&Sequence_7",
+        "Total&Sequence_8",
+        "TotalDeaths&Sequence_8",
+        "TotalCases&Sequence_8",
+        "TotalRecovered&Sequence_8",
+        "Total&Sequence_3",
+        "TotalDeaths&Sequence_3",
+        "TotalCases&Sequence_3",
+        "TotalRecovered&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
