@@ -819,7 +819,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </p:CVScope>
     </Sequence>
-    <Sequence DisplayName="[Sequence/Extract tables]" sap:VirtualizedContainerService.HintSize="942,5020" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="[Sequence/Extract tables]" sap:VirtualizedContainerService.HintSize="942,3368" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="input_country" />
       </Sequence.Variables>
@@ -829,7 +829,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut sap2010:Annotation.AnnotationText="We use computer vision &quot;Extract Table&quot; but it did not work because the &quot;arrow down&quot; keyboard input crashes mid execution so we did a workaround it. By scrolldown to the table first, then open and record the activity using computer vision.&#xA;&#xA;Errors: &#xA;Cannot extract the data inside the table&#xA;Cannot find the element &quot;table&quot; in the website (sometimes)" DisplayName="Encountering Error - Comment Out" sap:VirtualizedContainerService.HintSize="880,234" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut sap2010:Annotation.AnnotationText="We use computer vision &quot;Extract Table&quot; but it did not work because the &quot;arrow down&quot; keyboard input crashes mid execution so we did a workaround it. By scrolldown to the table first, then open and record the activity using computer vision.&#xA;&#xA;Errors: &#xA;Cannot extract the data inside the table&#xA;Cannot find the element &quot;table&quot; in the website (sometimes)" DisplayName="Encountering Error - Comment Out" sap:VirtualizedContainerService.HintSize="880,324" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <sap:WorkflowViewStateService.ViewState>
@@ -2752,15 +2752,16 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </p:CVScope>
-      <Sequence DisplayName="Sequence For Dialog Input Country Name" sap:VirtualizedContainerService.HintSize="880,1824" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence sap2010:Annotation.AnnotationText="By using the country name extract from the table, we can ensure that country will never get mistaken while writing or regex in a multiple choice dialogue. Only error need to be catch is when they leave the dialog empty" DisplayName="Sequence For Dialog Input Country Name" sap:VirtualizedContainerService.HintSize="880,114" sap2010:WorkflowViewState.IdRef="Sequence_14">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Name="list_of_countries" />
           <Variable x:TypeArguments="x:Boolean" Name="country_exist" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Assign sap:VirtualizedContainerService.HintSize="626,114" sap2010:WorkflowViewState.IdRef="Assign_8">
@@ -2780,9 +2781,9 @@
           </Assign.Value>
         </Assign>
         <ui:LogMessage DisplayName="Log List Of Countries" sap:VirtualizedContainerService.HintSize="626,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[list_of_countries]" />
-        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="626,1303" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do: Match the country selected with the country in the table" sap:VirtualizedContainerService.HintSize="626,1303" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
           <ui:InterruptibleDoWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,1166" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <Sequence DisplayName="Select your country" sap:VirtualizedContainerService.HintSize="592,1166" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2848,13 +2849,13 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="784,2487" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence DisplayName="Assign Data TotalCases, TotalDeaths, TotalRecovered Of The Country You selected" sap:VirtualizedContainerService.HintSize="784,2487" sap2010:WorkflowViewState.IdRef="Sequence_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[CurrentRow(1).ToString() = input_country]" DisplayName="If Country Exists In Table" sap:VirtualizedContainerService.HintSize="722,2399" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[CurrentRow(1).ToString() = input_country]" DisplayName="If Country Exists In Table" sap:VirtualizedContainerService.HintSize="722,2376" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2875,7 +2876,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign the Rows of the table into local variables" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="626,241" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign the Rows of the table into local variables" DisplayName="Assign Total Cases, Total Deaths. Total Recovered to local variable" sap:VirtualizedContainerService.HintSize="626,241" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -2911,7 +2912,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
-                      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="anomallyannie@gmail.com" DisplayName="Use Gmail" EmailAddress="anomallyannie@gmail.com" sap:VirtualizedContainerService.HintSize="626,1657" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+                      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="anomallyannie@gmail.com" DisplayName="Use Gmail to send the data of the country to someone through mail" EmailAddress="anomallyannie@gmail.com" sap:VirtualizedContainerService.HintSize="626,1632" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
                         <umab:GmailApplicationCard.Body>
                           <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                             <ActivityAction.Argument>
@@ -2971,7 +2972,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </Assign>
                                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[current_time]" />
-                                      <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,419" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Corona Virus Report - Kakashi Spirit Daily News" To="[Mail_in_the_list]" UseDocumentAsBody="False">
+                                      <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,419" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Corona Virus Report - Kakashi Psychic News" To="[Mail_in_the_list]" UseDocumentAsBody="False">
                                         <umab:SendMailX.Files>
                                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
                                             <InArgument x:TypeArguments="x:String">images\thecure.jpg</InArgument>
