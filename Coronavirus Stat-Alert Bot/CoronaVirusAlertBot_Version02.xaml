@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence02" this:Sequence02.website_url="https://www.worldometers.info/coronavirus/#countries" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence02" this:Sequence02.website_url="https://www.worldometers.info/coronavirus/#countries" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:um1="clr-namespace:UiPath.Mail;assembly=UiPath.Mail" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="website_url" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>994,6289</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>847,3638</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence02_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -62,6 +62,7 @@
       <x:String>UiPath.OCR.Contracts.Activities</x:String>
       <x:String>UiPath.CV.Activities.Interfaces</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -145,7 +146,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1004,6224" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence sap:VirtualizedContainerService.HintSize="857,3573" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd2:DataTable" Name="Extract_Data_Table" />
     </Sequence.Variables>
@@ -155,60 +156,105 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Description: Step by step&#xA;1. Use &quot;Computer Vision&quot; To capture the computer screen and open the browser&#xD;&#xA;2. Use &quot;Computer Vision&quot; To input the &quot;Corona Virus Stat&quot; website address into the address bar and go there&#xD;&#xA;3. Extract The Table Data and save it to a local variable&#xD;&#xA;4. Iterate the column &quot;Country, Other&quot; to get all the country names and put that array into a multiple choice dialog&#xD;&#xA;5. After user choose the country, the appropriate datas &quot;Total Deaths&quot;, &quot;Total Cases&quot;, &quot;Total Recovered&quot; of that country got assign to variables&#xD;&#xA;6. The infomation then will be send through the list of emails&#xD;&#xA;&#xA;Variables:&#xA;- ExtractDataTable&#xD;&#xA;- TotalCases&#xD;&#xA;- TotalDeaths&#xD;&#xA;- TotalRecovered&#xD;&#xA;- input_country&#xD;&#xA;- list_of_emails&#xD;&#xA;- CurrentRow&#xD;&#xA;- Mail_in_the_list&#xD;&#xA;Arguements:&#xD;&#xA;- website_url (address to the corona stat website)" DisplayName="Main/Assignment3]" sap:VirtualizedContainerService.HintSize="942,1068" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence sap2010:Annotation.AnnotationText="Description: Step by step&#xA;1. Use &quot;Computer Vision&quot; To capture the computer screen and open the browser&#xA;2. Use &quot;Computer Vision&quot; To input the &quot;Corona Virus Stat&quot; website address into the address bar and go there&#xA;3. Extract The Table Data and save it to a local variable&#xA;4. Iterate the column &quot;Country, Other&quot; to get all the country names and put that array into a multiple choice dialog&#xA;5. After user choose the country, the appropriate datas &quot;Total Deaths&quot;, &quot;Total Cases&quot;, &quot;Total Recovered&quot; of that country got assign to variables&#xA;6. The infomation then will be send through the list of emails&#xA;&#xA;Variables:&#xA;- ExtractDataTable&#xA;- TotalCases&#xA;- TotalDeaths&#xA;- TotalRecovered&#xA;- input_country&#xA;- list_of_emails&#xA;- CurrentRow&#xA;- Mail_in_the_list&#xA;Arguements:&#xA;- website_url (address to the corona stat website)" DisplayName="Main/Assignment3]" sap:VirtualizedContainerService.HintSize="795,582" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="0eeca9a0-32a8-4804-8456-1315e239844f" DisplayName="Sequence To Open Browser With Computer Vision" sap:VirtualizedContainerService.HintSize="434,558" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="0eeca9a0-32a8-4804-8456-1315e239844f" DisplayName="Sequence To Open Browser With Computer Vision" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
         <p:CVScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
             </ActivityAction.Argument>
             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_16">
-              <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (786,8,33,33)&quot; +&#xA;&quot;Anchor: Icon (656,9,31,29)&quot;]" DesignTimeCacheId="0eeca9a0-32a8-4804-8456-1315e239844f" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="400,208" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="11cb5773bb4488b72279adc7b45e9a15" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
-                <p:CvClickWithDescriptor.CursorPosition>
-                  <ui:CursorPosition Position="Center">
-                    <ui:CursorPosition.OffsetX>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetX>
-                    <ui:CursorPosition.OffsetY>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetY>
-                  </ui:CursorPosition>
-                </p:CvClickWithDescriptor.CursorPosition>
-                <p:CvClickWithDescriptor.DesignTimeDescriptor>
-                  <uc:CvDescriptor Id="f3f56945-bdc8-4025-9000-6a0baafb2b81">
-                    <uc:CvDescriptor.Anchors>
-                      <x:Array Type="uc:CvElementDescriptor">
-                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="656, 9, 31, 29" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAdCAYAAABSZrcyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUhSURBVEhLjZdJT2NXEIX9J5Kedt2ddABD77KIEinMILWEIkXMg23ANjP8IbKJFDETZQVmsrExobfsEIMQMxhs5rlyTz3X9X2voRWk0ns2tr86p+rWvc+V890rQmS/f8lX8x7v/fD2W3LjfXWPa+73r9X1pbq+orwPryn7Hf5vvc55/4IDr3PevaBs9V255qrv56nvI9zqfwgXYG71gwLPwpfUByUAzcaHkaADBEjW22/0+wKWZDgh9V0AAc9RyXxULEnCBTBCFAMqCbAT6jXUSgKsKq0QP47Ae0gMYap3wy1AVQIAi2JR7xKFNiAy/fCGExLLxXZtazoBvEYCcEDApvWAQzXAYr3cs+1iOerrrPtff/5B5t/j4yM9PDzQ/f09x93dHd3e3nLc3NxwXF9f09XVFV1eXtLFxQX98/eItl7UIxEXFApc7DdLcZpKMVugAjahAjahAgb84OCArQcY9gPMcGk4uZr2I6lUKqnBTqVOqKkW0PPzczo7O6P9/X3KU6VB90sJkISGS8c7eyB5cqLtdVoMpU6LBSrg09NT2tvbY7hzGbLtAMvV7HZ0+clx4n/VFVBTLaApVTLE7u6uNReM1YEVwt1uLjMkwoMlvfYTiSNbQz1XV1OpgJPJJCF2dna0almaGo46//7bJ+rr6+Po7e2l7u5uCgaDFI/H6fPnJVpa+pcWFxc54vEFjoWFBYrFYhSNztP8/DwtLy+zUoHieqLKtr29bU299LKUIaSXWldnpwb39PRQV1cXBQIBBYtrMBIxobFYlMGRSIQjHJ7TYECPj48pkUjQ1tYWDyBzKGnlsLmzo4MARUB1p0rG7/fTIgMl7GoFGomEGTw3N8dKARXw0dERbW5usnIMInNC6pp3tLczFIoB7lDJAA5r7RZHlcWWUlEL6OzsrIoZG/Tw8JAQAnduQBre3ha0gQFvbW1VNY2m6+q0OKMW4JmZaZqeniYoRQgYA2ZjY+OL/QD155ojgsGAVgxwu3KipaWFGykazagNh53QGQ2empqyQQHGgFlfX9f1NjcevbEEAn62WsDo9ObmZrZWbBawpdQODYVCFApNMlygGC5Y42tra3rbhfVSd95SsdYBh9q2tjZeYuh0n8/HjZRRi7pmwFBqQUM0OTlJExMTrBRQAWONr66u2pYa1GPg6PHq97fawGg2j8fDP4wE7GqnKAO2oBImFGDEysqKOvWoDSx9GJF9X8NbVX1FMcBotqamJurv76fx8XEaGxtTMUqjo5kYGRmm4eFhGhoaosHBQRoYGOBB44yx0SHbSYiHDcar7GYtzT62WsBoNq/XS42NjdTQ0ED19fVUV1fHUVtbSzU1NVRdXc1RVVVFlZWVHHLowCHEOnrhXIfpZoWcAbXtqLnP52W1gEqg4ZAAHHAmgQTMJCQBOfkIVJIAVOBQzcrlhOr1emxQNBsCcNT+uQTggLiABFBbUzWgEqLebdoO6z2eJoZD7VPQp5SbUKftUC5qxf6s9DE8FyXBkJH9u0bV7jnw12pu1ruiooKtzZx0rdNvptbp1+h6gUN5wa+/UHl5OUdZWRlHaWkplZSUUHFxMUdRUREVFhZSQUGBjvz8fJL4+acfbQ2nbU4/bOShBLjHVFUJuMyHBPMBAu+bJ9vM04rVxc5Gcna2eeSGE7BcNyG6Xv1GerziqeWNflgwHyJk9psqnrt/anl9sdS43hqOjQVPLGZkzvL6WG08r0njmM9w1gSz1rTUHJ+Ten9U/xfLcUUJ/gP76tPq1vTLswAAAABJRU5ErkJggg==" />
-                      </x:Array>
-                    </uc:CvDescriptor.Anchors>
-                    <uc:CvDescriptor.Target>
-                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="786, 8, 33, 33" ElementType="Icon" ImageBase64="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" />
-                    </uc:CvDescriptor.Target>
-                  </uc:CvDescriptor>
-                </p:CvClickWithDescriptor.DesignTimeDescriptor>
-                <p:CvClickWithDescriptor.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1d27fbba-a4ed-463e-8504-5930c8b48cd9">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </p:CvClickWithDescriptor.Target>
+              <TryCatch sap2010:Annotation.AnnotationText="There is an error when using Window 11, as the icon for the &quot;Task View&quot; feature will clash with other icon on the task bar in Window, leading to maybe a &quot;element not found&quot; error. If needed, we can use open application directly to open the browser and use computer vision afterward." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </p:CvClickWithDescriptor>
+                <TryCatch.Try>
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (786,8,33,33)&quot; +&#xA;&quot;Anchor: Icon (656,9,31,29)&quot;]" DesignTimeCacheId="0eeca9a0-32a8-4804-8456-1315e239844f" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="11cb5773bb4488b72279adc7b45e9a15" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                    <p:CvClickWithDescriptor.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </p:CvClickWithDescriptor.CursorPosition>
+                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="f3f56945-bdc8-4025-9000-6a0baafb2b81">
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="656, 9, 31, 29" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAdCAYAAABSZrcyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUhSURBVEhLjZdJT2NXEIX9J5Kedt2ddABD77KIEinMILWEIkXMg23ANjP8IbKJFDETZQVmsrExobfsEIMQMxhs5rlyTz3X9X2voRWk0ns2tr86p+rWvc+V890rQmS/f8lX8x7v/fD2W3LjfXWPa+73r9X1pbq+orwPryn7Hf5vvc55/4IDr3PevaBs9V255qrv56nvI9zqfwgXYG71gwLPwpfUByUAzcaHkaADBEjW22/0+wKWZDgh9V0AAc9RyXxULEnCBTBCFAMqCbAT6jXUSgKsKq0QP47Ae0gMYap3wy1AVQIAi2JR7xKFNiAy/fCGExLLxXZtazoBvEYCcEDApvWAQzXAYr3cs+1iOerrrPtff/5B5t/j4yM9PDzQ/f09x93dHd3e3nLc3NxwXF9f09XVFV1eXtLFxQX98/eItl7UIxEXFApc7DdLcZpKMVugAjahAjahAgb84OCArQcY9gPMcGk4uZr2I6lUKqnBTqVOqKkW0PPzczo7O6P9/X3KU6VB90sJkISGS8c7eyB5cqLtdVoMpU6LBSrg09NT2tvbY7hzGbLtAMvV7HZ0+clx4n/VFVBTLaApVTLE7u6uNReM1YEVwt1uLjMkwoMlvfYTiSNbQz1XV1OpgJPJJCF2dna0almaGo46//7bJ+rr6+Po7e2l7u5uCgaDFI/H6fPnJVpa+pcWFxc54vEFjoWFBYrFYhSNztP8/DwtLy+zUoHieqLKtr29bU299LKUIaSXWldnpwb39PRQV1cXBQIBBYtrMBIxobFYlMGRSIQjHJ7TYECPj48pkUjQ1tYWDyBzKGnlsLmzo4MARUB1p0rG7/fTIgMl7GoFGomEGTw3N8dKARXw0dERbW5usnIMInNC6pp3tLczFIoB7lDJAA5r7RZHlcWWUlEL6OzsrIoZG/Tw8JAQAnduQBre3ha0gQFvbW1VNY2m6+q0OKMW4JmZaZqeniYoRQgYA2ZjY+OL/QD155ojgsGAVgxwu3KipaWFGykazagNh53QGQ2empqyQQHGgFlfX9f1NjcevbEEAn62WsDo9ObmZrZWbBawpdQODYVCFApNMlygGC5Y42tra3rbhfVSd95SsdYBh9q2tjZeYuh0n8/HjZRRi7pmwFBqQUM0OTlJExMTrBRQAWONr66u2pYa1GPg6PHq97fawGg2j8fDP4wE7GqnKAO2oBImFGDEysqKOvWoDSx9GJF9X8NbVX1FMcBotqamJurv76fx8XEaGxtTMUqjo5kYGRmm4eFhGhoaosHBQRoYGOBB44yx0SHbSYiHDcar7GYtzT62WsBoNq/XS42NjdTQ0ED19fVUV1fHUVtbSzU1NVRdXc1RVVVFlZWVHHLowCHEOnrhXIfpZoWcAbXtqLnP52W1gEqg4ZAAHHAmgQTMJCQBOfkIVJIAVOBQzcrlhOr1emxQNBsCcNT+uQTggLiABFBbUzWgEqLebdoO6z2eJoZD7VPQp5SbUKftUC5qxf6s9DE8FyXBkJH9u0bV7jnw12pu1ruiooKtzZx0rdNvptbp1+h6gUN5wa+/UHl5OUdZWRlHaWkplZSUUHFxMUdRUREVFhZSQUGBjvz8fJL4+acfbQ2nbU4/bOShBLjHVFUJuMyHBPMBAu+bJ9vM04rVxc5Gcna2eeSGE7BcNyG6Xv1GerziqeWNflgwHyJk9psqnrt/anl9sdS43hqOjQVPLGZkzvL6WG08r0njmM9w1gSz1rTUHJ+Ten9U/xfLcUUJ/gP76tPq1vTLswAAAABJRU5ErkJggg==" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="786, 8, 33, 33" ElementType="Icon" ImageBase64="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" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                    <p:CvClickWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1d27fbba-a4ed-463e-8504-5930c8b48cd9">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvClickWithDescriptor.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </p:CvClickWithDescriptor>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="uc:ElementNotFoundException" sap:VirtualizedContainerService.HintSize="456,392" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="uc:ElementNotFoundException">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="uc:ElementNotFoundException" Name="exception" />
+                      </ActivityAction.Argument>
+                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: New tab" sap:VirtualizedContainerService.HintSize="450,322" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="188542c5-b7c7-4487-a494-72a52258d4df" Version="V2" WindowResize="Maximize">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,105" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="1, 0, 1257, 754" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAARxJREFUWEftlusNwjAMhDtCR2CUbkI3oBu0I7ARozACI0A+VCOX1uTh8C+WIkVOfD5fEzdd12yvwBBctzAeYTwrDjDPMcHnigkt8uQ4tFElX8K8N/YJcKwYvQ7WpPBReWdIBDgbf1kJAcGjMOLJtTMBtiqXAA8BsInnfJkEIgJ8DucpttFYNwtIrUxk9N6QYgUIvK4yeki4CBSq/w5zfwJP8kagKVCkAH8wOtc9DP03y/VHO6l1PUgsa7qF5vqLCeh3AUnFcv3FBMZVfhIyF8v1FxPwNp7v+NYJmwKmAnKt+tqnTuGBbRLgocji8kcClzXH4aN0UOymMK+pBFizwtctfVMv1XueWSmxUYXpcPI5UgBT9nC+wETlZhsFXsyPDc+YWg+mAAAAAElFTkSuQmCC" InformativeScreenshot="1f3d389378c5c70a01019c8605ce22b9.png" Selector="&lt;html app='msedge.exe' title='New tab' /&gt;" Title="New tab" Url="edge://newtab/" />
+                        </uix:NApplicationCard.TargetApp>
+                      </uix:NApplicationCard>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+              </TryCatch>
             </Sequence>
           </ActivityAction>
         </p:CVScope.Body>
@@ -298,19 +344,19 @@
         </p:CVScope.UseLocalServer>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </p:CVScope>
-      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="4da849e8-b8c5-4ecd-b714-a054f1ef8d36" DisplayName="CV Screen Scope For Input Website Address And Go There" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="CVScope_3" SendOnPremData="False" Version="V6">
+      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="4da849e8-b8c5-4ecd-b714-a054f1ef8d36" DisplayName="CV Screen Scope For Input Website Address And Go There" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="CVScope_3" SendOnPremData="False" Version="V6">
         <p:CVScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
             </ActivityAction.Argument>
             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_17">
-              <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (147,44,775,32)&quot; +&#xD;&#xA;&quot;Anchor: Text '-' (854,54,7,7)&quot;]" DesignTimeCacheId="4da849e8-b8c5-4ecd-b714-a054f1ef8d36" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,210" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="7e198e287af44ab550902f42963987f4" NumberOfScrolls="2" ScrollDirection="None" Text="[website_url +&quot;[k(enter)]&quot;]" Version="V6">
+              <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (147,44,775,32)&quot; +&#xA;&quot;Anchor: Text '-' (854,54,7,7)&quot;]" DesignTimeCacheId="4da849e8-b8c5-4ecd-b714-a054f1ef8d36" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,210" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="7e198e287af44ab550902f42963987f4" NumberOfScrolls="2" ScrollDirection="None" Text="[website_url +&quot;[k(enter)]&quot;]" Version="V6">
                 <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                   <uc:CvDescriptor Id="71d63068-89fd-4da3-bb7e-98459bfeea3b">
                     <uc:CvDescriptor.Anchors>
@@ -337,10 +383,13 @@
             </Sequence>
           </ActivityAction>
         </p:CVScope.Body>
+        <p:CVScope.DesignTimeCache>
+          <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+        </p:CVScope.DesignTimeCache>
         <p:CVScope.DesignTimeCacheContainer>
           <uc:CvCacheContainer>
             <uc:CvCacheContainer.Caches>
-              <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
+              <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
                 <uc:CVCache DataSent="False" DisplayName="1" Id="4da849e8-b8c5-4ecd-b714-a054f1ef8d36" InformativeScreenshot="38056f6576532493735eb02717be4591" LogicalPosition="8, 0" OcrText="... New tab X + _ X - + ... Import favorites For quick access, place your favorites here on the favorites bar. Manage favorites now &quot;UiPath Browser Automation 23.10&quot; started debugging this browser Cancel X Microsoft Start Timm kiem tren web ship Thanh Pho Makat... 32&quot;C Englich f + The Autioms... Miomcefit 965 Alltxpres Backing.em Lanaa Fecmbosk Cutlosk -ail Mimmmsfst... Thi Kham pha Tintuc Th thao Tra chei theng thuilng chinh Thalslit Theod Camhan.hda Todntang v Thanh PM Malrati 32 Dangsute O Hing. Hing Laig Bin_ Tudi DetallyAgecem Online Dating Site for 44 Bien xe Trung Quoc thanh xe V, hang bi phat ca tram Mature ti dong 16:00 1700 18:0 1900 XTA Al Xaemdy blio dly TanPhang gi + Cong Vinh - Thuy Tien truac TN truaing - TAPUESTA khi co tin ran nut VNI EURO! &amp; 1 Vhinde UNC betcris FTSE a.anpa HSI -1,67% Betcriums #00 Rng Smg S0005 N22S -0,09% Apuestas en Futbol de UEFA N6a225 Ma.ses.a USD/ND 0,00% aling 2s.45o Ad [ Xa itnuing Cover vidla NASA tiet lo video trai Ngai-s ngiy nghiem khi bi hut vao ho den Bo Chinh tri dong y cho ong &amp; 329 Dinh Tien Dung thoi chuc Wnxpmes 2 ngiy &amp; Vg lanh nhat tu ngay tap gym, thurong di choi khuya Phom. Gumu Senices Lad iPhone &amp; iPad Repair Nearby X A msn.com/vi-vn/entertainment/news/../ar-BB1oGiST VTC 6gia" Position="8, 0" ScreenshotGuid="0f4b5e70-a3b0-46c8-b778-2205498bbe14" ServerVersion="24.1.2.2">
                   <uc:CVCache.CvAnchorRelations>
                     <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
@@ -819,7 +868,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </p:CVScope>
     </Sequence>
-    <Sequence DisplayName="[Sequence/Extract tables]" sap:VirtualizedContainerService.HintSize="942,3368" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="[Sequence/Extract tables]" sap:VirtualizedContainerService.HintSize="795,2855" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="input_country" />
       </Sequence.Variables>
@@ -829,7 +878,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut sap2010:Annotation.AnnotationText="We use computer vision &quot;Extract Table&quot; but it did not work because the &quot;arrow down&quot; keyboard input crashes mid execution so we did a workaround it. By scrolldown to the table first, then open and record the activity using computer vision.&#xA;&#xA;Errors: &#xA;Cannot extract the data inside the table&#xA;Cannot find the element &quot;table&quot; in the website (sometimes)" DisplayName="Encountering Error - Comment Out" sap:VirtualizedContainerService.HintSize="880,324" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut sap2010:Annotation.AnnotationText="We use computer vision &quot;Extract Table&quot; but it did not work because the &quot;arrow down&quot; keyboard input crashes mid execution so we did a workaround it. By scrolldown to the table first, then open and record the activity using computer vision.&#xA;&#xA;Errors: &#xA;Cannot extract the data inside the table&#xA;Cannot find the element &quot;table&quot; in the website (sometimes)" DisplayName="Encountering Error - Comment Out" sap:VirtualizedContainerService.HintSize="733,268" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <sap:WorkflowViewStateService.ViewState>
@@ -838,7 +887,7 @@
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="f2bda794-9c83-485f-aa85-c44432b2772b" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="756,2784" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="f2bda794-9c83-485f-aa85-c44432b2772b" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="434,727" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -848,7 +897,7 @@
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd2:DataTable" Name="ExtractDataTable" />
                     </Sequence.Variables>
-                    <p:CvExtractDataTableWithDescriptor InRegion="{x:Null}" ScrollOffset="{x:Null}" AddHeaders="True" DelayScreenshotAfterScroll="250" Descriptor="[&quot;Target: Table (336,473,1097,336)&quot;]" DesignTimeCacheId="4dfbf091-891e-4d20-8435-8a2c6ec45b15" DesignTimeScaleFactor="1.25" DisplayName="CV Extract Table - Table" sap:VirtualizedContainerService.HintSize="722,222" sap2010:WorkflowViewState.IdRef="CvExtractDataTableWithDescriptor_1" IgnoreEmptyRows="False" InformativeScreenshot="4c0ddf25ebe43af4d7e0a373b9a85703" MaxTableScrollHeightInPixels="30000" NumberOfScrolls="2" RefreshBefore="True" Result="[Extract_Data_Table]" Scroll="False" ScrollDirection="None" Version="V6">
+                    <p:CvExtractDataTableWithDescriptor InRegion="{x:Null}" ScrollOffset="{x:Null}" AddHeaders="True" DelayScreenshotAfterScroll="250" Descriptor="[&quot;Target: Table (336,473,1097,336)&quot;]" DesignTimeCacheId="4dfbf091-891e-4d20-8435-8a2c6ec45b15" DesignTimeScaleFactor="1.25" DisplayName="CV Extract Table - Table" sap:VirtualizedContainerService.HintSize="400,222" sap2010:WorkflowViewState.IdRef="CvExtractDataTableWithDescriptor_1" IgnoreEmptyRows="False" InformativeScreenshot="4c0ddf25ebe43af4d7e0a373b9a85703" MaxTableScrollHeightInPixels="30000" NumberOfScrolls="2" RefreshBefore="True" Result="[Extract_Data_Table]" Scroll="False" ScrollDirection="None" Version="V6">
                       <p:CvExtractDataTableWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="21eb8bd9-532f-4273-a9bd-ce632a399b5d">
                           <uc:CvDescriptor.Target>
@@ -857,131 +906,7 @@
                         </uc:CvDescriptor>
                       </p:CvExtractDataTableWithDescriptor.DesignTimeDescriptor>
                     </p:CvExtractDataTableWithDescriptor>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="722,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[Extract_Data_Table.AsText]" />
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Extract_Data_Table]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="722,2046" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                      <ui:ForEachRow.Body>
-                        <ActivityAction x:TypeArguments="sd2:DataRow">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,1859" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="626,271" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Input County Name" Title="Input County Name">
-                              <ui:InputDialog.Result>
-                                <OutArgument x:TypeArguments="x:String">[input_country]</OutArgument>
-                              </ui:InputDialog.Result>
-                            </ui:InputDialog>
-                            <If Condition="[CurrentRow(&quot;USA&quot;).ToString = input_country.ToString]" sap:VirtualizedContainerService.HintSize="626,1387" sap2010:WorkflowViewState.IdRef="If_2">
-                              <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,1114" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="x:String" Name="Total" />
-                                    <Variable x:TypeArguments="x:String" Name="TotalDeaths" />
-                                    <Variable x:TypeArguments="x:String" Name="TotalCases" />
-                                    <Variable x:TypeArguments="x:String" Name="TotalRecovered" />
-                                  </Sequence.Variables>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[TotalCases]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Total Cases").ToString]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <Assign sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_5">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[TotalDeaths]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Total Deaths").ToString]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <Assign sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_6">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[TotalRecovered]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Total Recovered").ToString]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="luonglvse160810@fpt.edu.vn" DisplayName="Use Gmail" EmailAddress="luonglvse160810@fpt.edu.vn" sap:VirtualizedContainerService.HintSize="530,684" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
-                                    <umab:GmailApplicationCard.Body>
-                                      <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
-                                        </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,479" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,391" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Hi" To="luuluong2503@gmail.com" UseDocumentAsBody="False">
-                                            <umab:SendMailX.Files>
-                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                            </umab:SendMailX.Files>
-                                            <umab:SendMailX.HtmlBodyFromFile>
-                                              <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
-                                                <umabh:HtmlContentArgument.RuntimeImages>
-                                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                                </umabh:HtmlContentArgument.RuntimeImages>
-                                                <umabh:HtmlContentArgument.ValueMappings>
-                                                  <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
-                                                    <umabh:HtmlTextValueMapping Name="Case" Value="[TotalCases]" />
-                                                    <umabh:HtmlTextValueMapping Name="Deaths" Value="[TotalDeaths]" />
-                                                    <umabh:HtmlTextValueMapping Name="Recovered" Value="[TotalRecovered]" />
-                                                    <umabh:HtmlTextValueMapping Name="Name" Value="[input_country]" />
-                                                  </scg:List>
-                                                </umabh:HtmlContentArgument.ValueMappings>
-                                              </umabh:HtmlContentArgument>
-                                            </umab:SendMailX.HtmlBodyFromFile>
-                                          </umab:SendMailX>
-                                        </Sequence>
-                                      </ActivityAction>
-                                    </umab:GmailApplicationCard.Body>
-                                    <umab:GmailApplicationCard.ClientId>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <Literal x:TypeArguments="x:String" Value="" />
-                                      </InArgument>
-                                    </umab:GmailApplicationCard.ClientId>
-                                    <umab:GmailApplicationCard.ClientSecret>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <Literal x:TypeArguments="x:String" Value="" />
-                                      </InArgument>
-                                    </umab:GmailApplicationCard.ClientSecret>
-                                  </umab:GmailApplicationCard>
-                                </Sequence>
-                              </If.Then>
-                              <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </If.Else>
-                            </If>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="626,113" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[Extract_Data_Table.ToString]" />
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:ForEachRow.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:ForEachRow>
+                    <ui:LogMessage DisplayName="Message return empty in the log " sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[Extract_Data_Table.AsText]" />
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
@@ -2270,20 +2195,20 @@
         </ui:CommentOut.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="323e5685-72b9-425b-b183-1538fd18d934" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="880,57" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V6">
+      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="323e5685-72b9-425b-b183-1538fd18d934" DisplayName="CV Screen Scope To Extract Data From Web Table" sap:VirtualizedContainerService.HintSize="733,563" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V6">
         <p:CVScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
             </ActivityAction.Argument>
             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_18">
-              <p:CvExtractDataTableWithDescriptor InRegion="{x:Null}" ScrollOffset="{x:Null}" AddHeaders="True" DelayScreenshotAfterScroll="250" Descriptor="[&quot;Target: Table (118,327,1065,400)&quot;]" DesignTimeCacheId="323e5685-72b9-425b-b183-1538fd18d934" DesignTimeScaleFactor="1" DisplayName="CV Extract Table - Table" sap:VirtualizedContainerService.HintSize="400,215" sap2010:WorkflowViewState.IdRef="CvExtractDataTableWithDescriptor_2" IgnoreEmptyRows="False" InformativeScreenshot="3f3d6f3849e493234381666c814e4a10" MaxTableScrollHeightInPixels="30000" NumberOfScrolls="10" RefreshBefore="True" Result="[Extract_Data_Table]" Scroll="True" ScrollDirection="Down" Version="V6">
+              <p:CvExtractDataTableWithDescriptor InRegion="{x:Null}" ScrollOffset="{x:Null}" AddHeaders="True" DelayScreenshotAfterScroll="250" Descriptor="[&quot;Target: Table (118,327,1065,400)&quot;]" DesignTimeCacheId="323e5685-72b9-425b-b183-1538fd18d934" DesignTimeScaleFactor="1" DisplayName="CV Extract Table - Table" sap:VirtualizedContainerService.HintSize="400,213" sap2010:WorkflowViewState.IdRef="CvExtractDataTableWithDescriptor_2" IgnoreEmptyRows="False" InformativeScreenshot="3f3d6f3849e493234381666c814e4a10" MaxTableScrollHeightInPixels="30000" NumberOfScrolls="10" RefreshBefore="True" Result="[Extract_Data_Table]" Scroll="True" ScrollDirection="Down" Version="V6">
                 <p:CvExtractDataTableWithDescriptor.DesignTimeDescriptor>
                   <uc:CvDescriptor Id="4b3c54bc-94fb-4c7d-bc18-62d60e141fb5">
                     <uc:CvDescriptor.Target>
@@ -2747,12 +2672,12 @@
         </p:CVScope.UseLocalServer>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </p:CVScope>
-      <Sequence sap2010:Annotation.AnnotationText="By using the country name extract from the table, we can ensure that country will never get mistaken while writing or regex in a multiple choice dialogue. Only error need to be catch is when they leave the dialog empty" DisplayName="Sequence For Dialog Input Country Name" sap:VirtualizedContainerService.HintSize="880,114" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence sap2010:Annotation.AnnotationText="By using the country name extract from the table, we can ensure that country will never get mistaken while writing or regex in a multiple choice dialogue. Only error need to be catch is when they leave the dialog empty" DisplayName="Sequence For Dialog Input Country Name" sap:VirtualizedContainerService.HintSize="733,114" sap2010:WorkflowViewState.IdRef="Sequence_14">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Name="list_of_countries" />
           <Variable x:TypeArguments="x:Boolean" Name="country_exist" />
@@ -2781,7 +2706,7 @@
           </Assign.Value>
         </Assign>
         <ui:LogMessage DisplayName="Log List Of Countries" sap:VirtualizedContainerService.HintSize="626,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[list_of_countries]" />
-        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do: Match the country selected with the country in the table" sap:VirtualizedContainerService.HintSize="626,1303" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[country_exist]" DisplayName="Do: Match the country selected with the country in the table" sap:VirtualizedContainerService.HintSize="626,1303" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
           <ui:InterruptibleDoWhile.Body>
             <Sequence DisplayName="Select your country" sap:VirtualizedContainerService.HintSize="592,1166" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <sap:WorkflowViewStateService.ViewState>
@@ -2831,31 +2756,28 @@
               </If>
             </Sequence>
           </ui:InterruptibleDoWhile.Body>
-          <ui:InterruptibleDoWhile.Condition>
-            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="country_exist" />
-          </ui:InterruptibleDoWhile.Condition>
         </ui:InterruptibleDoWhile>
       </Sequence>
-      <Sequence DisplayName="Sequence/SearchingForRequestedCountry]" sap:VirtualizedContainerService.HintSize="880,2785" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence DisplayName="Sequence/SearchingForRequestedCountry]" sap:VirtualizedContainerService.HintSize="733,1790" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Extract_Data_Table]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="818,2674" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Extract_Data_Table]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="671,1679" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
           <ui:ForEachRow.Body>
             <ActivityAction x:TypeArguments="sd2:DataRow">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Assign Data TotalCases, TotalDeaths, TotalRecovered Of The Country You selected" sap:VirtualizedContainerService.HintSize="784,2487" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence DisplayName="Assign Data TotalCases, TotalDeaths, TotalRecovered Of The Country You selected" sap:VirtualizedContainerService.HintSize="637,1492" sap2010:WorkflowViewState.IdRef="Sequence_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[CurrentRow(1).ToString() = input_country]" DisplayName="If Country Exists In Table" sap:VirtualizedContainerService.HintSize="722,2376" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[CurrentRow(1).ToString() = input_country]" DisplayName="If Country Exists In Table" sap:VirtualizedContainerService.HintSize="575,1404" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2863,7 +2785,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="688,1986" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="541,991" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="Total" />
                         <Variable x:TypeArguments="x:String" Name="TotalDeaths" />
@@ -2876,7 +2798,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign the Rows of the table into local variables" DisplayName="Assign Total Cases, Total Deaths. Total Recovered to local variable" sap:VirtualizedContainerService.HintSize="626,241" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign the Rows of the table into local variables" DisplayName="Assign Total Cases, Total Deaths. Total Recovered to local variable" sap:VirtualizedContainerService.HintSize="479,241" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -2912,118 +2834,167 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
-                      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="anomallyannie@gmail.com" DisplayName="Use Gmail to send the data of the country to someone through mail" EmailAddress="anomallyannie@gmail.com" sap:VirtualizedContainerService.HintSize="626,1632" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
-                        <umab:GmailApplicationCard.Body>
-                          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Send The Data To Some Emails" sap:VirtualizedContainerService.HintSize="592,1452" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                              <Sequence.Variables>
-                                <Variable x:TypeArguments="x:Int32" Name="current_index" />
-                              </Sequence.Variables>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap2010:Annotation.AnnotationText="Please change these to your emails for easier checking and not to spamming me. Thanks!" DisplayName="Array Of Emails" sap:VirtualizedContainerService.HintSize="530,156" sap2010:WorkflowViewState.IdRef="Assign_7">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="s:String[]">[list_of_emails]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="s:String[]">[New String() {"numberous1141@gmail.com", "jbarton686@gmail.com", "nhanchibao@gmail.com"}]</InArgument>
-                                </Assign.Value>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </Assign>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[list_of_emails]" />
-                              <ui:ForEach x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Use &quot;Arguement Type&quot; as &quot;String&quot;" CurrentIndex="[current_index]" DisplayName="For Each Mail_in_the_list" sap:VirtualizedContainerService.HintSize="530,1035" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_of_emails]">
-                                <ui:ForEach.Body>
-                                  <ActivityAction x:TypeArguments="x:String">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="x:String" Name="Mail_in_the_list" />
-                                    </ActivityAction.Argument>
-                                    <Sequence sap2010:Annotation.AnnotationText="Formating the email body and send the mail through each mail address in the provided list" DisplayName="Email Content" sap:VirtualizedContainerService.HintSize="496,867" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                                      <Sequence.Variables>
-                                        <Variable x:TypeArguments="x:String" Name="current_time" />
-                                      </Sequence.Variables>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap2010:Annotation.AnnotationText="Get the current time to put into the mail body" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_9">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:String">[current_time]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:String">[Now.ToString]</InArgument>
-                                        </Assign.Value>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Assign>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[current_time]" />
-                                      <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,419" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Corona Virus Report - Kakashi Psychic News" To="[Mail_in_the_list]" UseDocumentAsBody="False">
-                                        <umab:SendMailX.Files>
-                                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                                            <InArgument x:TypeArguments="x:String">images\thecure.jpg</InArgument>
-                                          </scg:List>
-                                        </umab:SendMailX.Files>
-                                        <umab:SendMailX.HtmlBodyFromFile>
-                                          <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
-                                            <umabh:HtmlContentArgument.RuntimeImages>
-                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                            </umabh:HtmlContentArgument.RuntimeImages>
-                                            <umabh:HtmlContentArgument.ValueMappings>
-                                              <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="8">
-                                                <umabh:HtmlTextValueMapping Name="Case" Value="[TotalCases]" />
-                                                <umabh:HtmlTextValueMapping Name="Deaths" Value="[TotalDeaths]" />
-                                                <umabh:HtmlTextValueMapping Name="Recovered" Value="[TotalRecovered]" />
-                                                <umabh:HtmlTextValueMapping Name="Name" Value="[input_country]" />
-                                                <umabh:HtmlTextValueMapping Name="CurrentTime" Value="[current_time]" />
+                      <TryCatch DisplayName="Try Catch Gmail Related Error" sap:VirtualizedContainerService.HintSize="438,525" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <TryCatch.Try>
+                          <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="anomallyannie@gmail.com" DisplayName="Use Gmail to send the data of the country to someone through mail" EmailAddress="anomallyannie@gmail.com" sap:VirtualizedContainerService.HintSize="215,25" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+                            <umab:GmailApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Send The Data To Some Emails" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Name="current_index" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap2010:Annotation.AnnotationText="Please change these to your emails for easier checking and not to spamming me. Thanks!" DisplayName="Array Of Emails" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:String[]">[list_of_emails]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:String[]">[New String() {"numberous1141@gmail.com", "blazehendrix007@gmail.com", "roguetrooper3000@gmail.com"}]</InArgument>
+                                    </Assign.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Assign>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[list_of_emails]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:LogMessage>
+                                  <ui:ForEach x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Hint: Use &quot;Arguement Type&quot; as &quot;String&quot; - Why you can only do this in the &quot;property&quot; tab?" CurrentIndex="[current_index]" DisplayName="For Each Mail_in_the_list" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_of_emails]">
+                                    <ui:ForEach.Body>
+                                      <ActivityAction x:TypeArguments="x:String">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:String" Name="Mail_in_the_list" />
+                                        </ActivityAction.Argument>
+                                        <Sequence sap2010:Annotation.AnnotationText="Formating the email body and send the mail through each mail address in the provided list" DisplayName="Email Content" sap:VirtualizedContainerService.HintSize="496,867" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="current_time" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap2010:Annotation.AnnotationText="Get the current time to put into the mail body" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[current_time]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[Now.ToString]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[current_time]" />
+                                          <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,419" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Corona Virus Report - Kakashi Psychic News" To="[Mail_in_the_list]" UseDocumentAsBody="False">
+                                            <umab:SendMailX.Files>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                                <InArgument x:TypeArguments="x:String">images\thecure.jpg</InArgument>
                                               </scg:List>
-                                            </umabh:HtmlContentArgument.ValueMappings>
-                                          </umabh:HtmlContentArgument>
-                                        </umab:SendMailX.HtmlBodyFromFile>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </umab:SendMailX>
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ui:ForEach.Body>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:ForEach>
-                            </Sequence>
-                          </ActivityAction>
-                        </umab:GmailApplicationCard.Body>
-                        <umab:GmailApplicationCard.ClientId>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </umab:GmailApplicationCard.ClientId>
-                        <umab:GmailApplicationCard.ClientSecret>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </umab:GmailApplicationCard.ClientSecret>
-                      </umab:GmailApplicationCard>
+                                            </umab:SendMailX.Files>
+                                            <umab:SendMailX.HtmlBodyFromFile>
+                                              <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
+                                                <umabh:HtmlContentArgument.RuntimeImages>
+                                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                </umabh:HtmlContentArgument.RuntimeImages>
+                                                <umabh:HtmlContentArgument.ValueMappings>
+                                                  <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="8">
+                                                    <umabh:HtmlTextValueMapping Name="Case" Value="[TotalCases]" />
+                                                    <umabh:HtmlTextValueMapping Name="Deaths" Value="[TotalDeaths]" />
+                                                    <umabh:HtmlTextValueMapping Name="Recovered" Value="[TotalRecovered]" />
+                                                    <umabh:HtmlTextValueMapping Name="Name" Value="[input_country]" />
+                                                    <umabh:HtmlTextValueMapping Name="CurrentTime" Value="[current_time]" />
+                                                  </scg:List>
+                                                </umabh:HtmlContentArgument.ValueMappings>
+                                              </umabh:HtmlContentArgument>
+                                            </umab:SendMailX.HtmlBodyFromFile>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </umab:SendMailX>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEach.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:ForEach>
+                                </Sequence>
+                              </ActivityAction>
+                            </umab:GmailApplicationCard.Body>
+                            <umab:GmailApplicationCard.ClientId>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </umab:GmailApplicationCard.ClientId>
+                            <umab:GmailApplicationCard.ClientSecret>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </umab:GmailApplicationCard.ClientSecret>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </umab:GmailApplicationCard>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="um1:MailException" sap:VirtualizedContainerService.HintSize="404,155" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ActivityAction x:TypeArguments="um1:MailException">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="um1:MailException" Name="exception" />
+                              </ActivityAction.Argument>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Cannot Send Mail! Please Try Again Later! Error: &quot;+exception.ToString]" />
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                      </TryCatch>
+                      <ui:Break sap2010:Annotation.AnnotationText="Break out of the loop to not wasting any more resources and time looping throught other extra countries (as we already found the one we search)" sap:VirtualizedContainerService.HintSize="479,105" sap2010:WorkflowViewState.IdRef="Break_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:Break>
                     </Sequence>
                   </If.Then>
                   <If.Else>
@@ -3043,7 +3014,7 @@
         </ui:ForEachRow>
       </Sequence>
     </Sequence>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Complete Message Box" sap:VirtualizedContainerService.HintSize="942,48" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Task Completed!&quot;]">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Complete Message Box" sap:VirtualizedContainerService.HintSize="795,48" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Task Completed!&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
