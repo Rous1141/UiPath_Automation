@@ -2,7 +2,7 @@
   "name": "Coronavirus Stat-Alert Bot",
   "projectId": "19c12fc8-6bd5-47d6-8178-082c2da33bf9",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "CoronaVirusAlertBot_Version02.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.23.3-preview]",
     "UiPath.Mail.Activities": "[1.23.1]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.0.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -51,6 +51,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "c6d84aec-7fa1-4223-8999-20b8c1bc3cc3",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CoronaVirusAlertBot_Version02.xaml",
+      "uniqueId": "e46151bd-0406-497c-86fe-275210bbbffc",
       "input": [],
       "output": []
     }
