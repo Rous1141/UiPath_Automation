@@ -12,7 +12,14 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Company_Name&Sequence_3"
+        "output_success&TryCatch_1",
+        "output_failed&TryCatch_1",
+        "app_exist&Sequence_1",
+        "pdf_data_table&Sequence_1",
+        "Due_Total&TryCatch_1",
+        "Invoice_Date&TryCatch_1",
+        "Invoice_Number&TryCatch_1",
+        "Company_Name&TryCatch_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
