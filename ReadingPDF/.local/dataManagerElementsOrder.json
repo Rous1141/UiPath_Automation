@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "current_doc_count&Sequence_12",
         "output_success&TryCatch_1",
         "output_failed&TryCatch_1",
         "app_exist&Sequence_1",
