@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1138.4,2956" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1138.4,3357.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -119,7 +119,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="806.4,2891.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="806.4,3292.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="pdf_data_table" />
       <Variable x:TypeArguments="x:Boolean" Name="app_exist" />
@@ -270,20 +270,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="744,2653.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="744,3055.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence For Extract Data From PDF and move it accordingly to the status" sap:VirtualizedContainerService.HintSize="707.2,2399.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence DisplayName="Sequence For Extract Data From PDF and move it accordingly to the status" sap:VirtualizedContainerService.HintSize="707.2,2800.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <Sequence.Variables>
-            <Variable x:TypeArguments="x:Int32" Name="current_doc_count">
-              <Variable.Default>
-                <Literal x:TypeArguments="x:Int32" />
-              </Variable.Default>
-            </Variable>
+            <Variable x:TypeArguments="x:Int32" Default="0" Name="current_doc_count" />
+            <Variable x:TypeArguments="x:String" Name="str_pdf_assest" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -299,7 +296,17 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <ui:ForEachFileX DisplayName="For Each PDF File In Folder 'Input'" Filter="*.pdf" Folder="Input" sap:VirtualizedContainerService.HintSize="644.8,2027.2" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="PDF_invoices" CacheStrategy="None" DisplayName="Get Asset" FolderPath="REFdemo" sap:VirtualizedContainerService.HintSize="644.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[str_pdf_assest]</OutArgument>
+            </ui:GetRobotAsset.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:GetRobotAsset>
+          <ui:ForEachFileX DisplayName="For Each PDF File In Folder 'Input'" Filter="*.pdf" Folder="[str_pdf_assest]" sap:VirtualizedContainerService.HintSize="644.8,2253.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
             <ui:ForEachFileX.Body>
               <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                 <ActivityAction.Argument1>
@@ -308,7 +315,7 @@
                 <ActivityAction.Argument2>
                   <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                 </ActivityAction.Argument2>
-                <Sequence DisplayName="Extract Data From Each File" sap:VirtualizedContainerService.HintSize="611.2,1732" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Extract Data From Each File" sap:VirtualizedContainerService.HintSize="611.2,1958.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -336,7 +343,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="548.8,1355.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="548.8,1581.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <TryCatch.Variables>
                       <Variable x:TypeArguments="x:String" Name="Company_Name" />
                       <Variable x:TypeArguments="x:String" Name="Invoice_Number" />
@@ -352,7 +359,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <Sequence DisplayName="Success To Extract Data" sap:VirtualizedContainerService.HintSize="512,1100.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Success To Extract Data" sap:VirtualizedContainerService.HintSize="512,1327.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -472,6 +479,20 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:AddDataRow>
+                        <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="REFdemo" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="REFDemo_queues">
+                          <ui:AddQueueItem.ItemInformation>
+                            <InArgument x:TypeArguments="x:String" x:Key="Company Name">[Company_Name]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Invoice Number">[Invoice_Number]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Invoice Date">[Invoice_Date]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Due Total">[Due_Total]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Status">Success</InArgument>
+                          </ui:AddQueueItem.ItemInformation>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:AddQueueItem>
                         <ui:AppendRange DataTable="[pdf_data_table]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="449.6,139.2" sap2010:WorkflowViewState.IdRef="AppendRange_2" SheetName="Sheet1" WorkbookPath="[&quot;ScrappedPDFOutput&quot;+&quot;.xlsx&quot;]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
