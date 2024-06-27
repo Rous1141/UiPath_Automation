@@ -86,7 +86,9 @@
     {
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "app_exist&Sequence_9"
+      ],
       "ArgumentsSectionElementsOrder": [
         "in_Config"
       ],
