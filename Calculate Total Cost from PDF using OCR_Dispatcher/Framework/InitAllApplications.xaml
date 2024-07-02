@@ -116,7 +116,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="1120,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Initializing applications...&quot;]" />
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[app_exist]" DisplayName="Initializing States (checking if Arobat is opened or not, close it, start a new session on it)" sap:VirtualizedContainerService.HintSize="1120,1596.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[app_exist]" DisplayName="Initializing States (checking if Arobat is opened or not, close it to start a new session on it)" sap:VirtualizedContainerService.HintSize="1120,1596.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Checking If PDF Exist Or Already Open" sap:VirtualizedContainerService.HintSize="1086.4,1459.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
@@ -125,9 +125,9 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NCheckState DisplayName="Check App State 'Sample Invoice'" Exists="[app_exist]" sap:VirtualizedContainerService.HintSize="1024,1370.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" Mode="WaitDisappear" Timeout="1" Version="V3">
+          <uix:NCheckState DisplayName="Check App State: Adobe Acrobat" Exists="[app_exist]" sap:VirtualizedContainerService.HintSize="1024,1370.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="1" Version="V3">
             <uix:NCheckState.IfExists>
-              <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="521.6,1088.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="521.6,1128.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,7 +135,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message: Does App Exist?" sap:VirtualizedContainerService.HintSize="459.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;PDF is opened? &quot;+app_exist.ToString]" />
-                <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: Sample Invoice 10.pdf - Adobe Acrobat Reader (64-bit)" sap:VirtualizedContainerService.HintSize="459.2,822.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="432fbaf8-a168-43ed-8d1a-05d4fdd0be09" Timeout="1" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: Adobe Acrobat Reader" sap:VirtualizedContainerService.HintSize="459.2,862.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="432fbaf8-a168-43ed-8d1a-05d4fdd0be09" Timeout="1" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -150,10 +150,10 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="363.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="432fbaf8-a168-43ed-8d1a-05d4fdd0be09" Version="V3">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable CVScreenId="dbaf9ebc-ffd0-4507-88f5-315f96af24e1" CvElementArea="1226, 8, 24, 24" CvType="CloseButton" DesignTimeRectangle="1210, 1, 60, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="4863dad7-5f8b-4a1b-8ebf-8cfa86d42e3e" InformativeScreenshot="6f0697d2a79d708f8d6d76a9735a8414.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Sample Invoice 10.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable CVScreenId="dbaf9ebc-ffd0-4507-88f5-315f96af24e1" CvElementArea="1226, 8, 24, 24" CvType="CloseButton" DesignTimeRectangle="1520, 1, 60, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="4863dad7-5f8b-4a1b-8ebf-8cfa86d42e3e" InformativeScreenshot="8dd5e29de6b39eff525851cd47984a9d.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Sample Invoice 10.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="dbaf9ebc-ffd0-4507-88f5-315f96af24e1" CvElementArea="1164, 7, 25, 25" CvType="MaximizeButton" DesignTimeRectangle="1149, 1, 60, 40" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Maximize' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Maximize' role='push button' automationid='' check:text='Maximize' /&gt;" Guid="1fb9f1cc-6be0-4f11-aa9c-c2fde293d577" SearchSteps="Selector, FuzzySelector, CV" />
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target CVScreenId="dbaf9ebc-ffd0-4507-88f5-315f96af24e1" CvElementArea="1164, 7, 25, 25" CvType="MaximizeButton" DesignTimeRectangle="1459, 1, 60, 40" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Maximize' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Maximize' role='push button' automationid='' check:text='Maximize' /&gt;" Guid="1fb9f1cc-6be0-4f11-aa9c-c2fde293d577" SearchSteps="Selector, FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
@@ -196,7 +196,7 @@
               </Sequence>
             </uix:NCheckState.IfExists>
             <uix:NCheckState.IfNotExists>
-              <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -207,10 +207,10 @@
               </Sequence>
             </uix:NCheckState.IfNotExists>
             <uix:NCheckState.Target>
-              <uix:TargetAnchorable DesignTimeRectangle="0, 0, 1280, 1030" DesignTimeScaleFactor="1.25" Guid="bee6ac86-4a54-4878-976d-5ada7b240764" InformativeScreenshot="acc22209073857db4b69b376a87f1f88.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Sample Invoice 1.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+              <uix:TargetAnchorable DesignTimeRectangle="0, 0, 1590, 1030" DesignTimeScaleFactor="1.25" Guid="1158e8c4-9310-45fb-ab19-3b55f0e6c13a" InformativeScreenshot="9b71e5d11e95e68846b04fa469ff9b41.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='Billing Invoice Template - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                 <uix:TargetAnchorable.Anchors>
-                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                    <uix:Target CVScreenId="2c604444-b7a9-4afe-8948-0290bede4ee9" CvElementArea="156, 1, 264, 43" CvTextArea="200, 13, 141, 20" CvTextArgument="Sample Invoice 1.pdf" CvType="Button" DesignTimeRectangle="157, 3, 262, 40" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Top Bar' cls='AVL_AVView' title='TopTabBarContainerViewForDocs' /&gt;&lt;ctrl name='*.pdf' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Top Bar' cls='AVL_AVView' title='TopTabBarContainerViewForDocs' /&gt;&lt;ctrl name='*.pdf' role='push button' automationid='' /&gt;" Guid="5b4d3e5c-cb73-4f47-ba29-f2db1be975fe" SearchSteps="Selector, FuzzySelector, CV" />
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <uix:Target DesignTimeRectangle="1520, 1, 60, 40" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="93bab287-2dc9-44c4-91ec-827986f898dc" SearchSteps="Selector, FuzzySelector" />
                   </scg:List>
                 </uix:TargetAnchorable.Anchors>
                 <uix:TargetAnchorable.FuzzySelectorArgument>

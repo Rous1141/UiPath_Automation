@@ -37,7 +37,7 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "formated_date&Sequence_2",
+        "formated_date&Sequence_1",
         "service_quantity_fee_string&Sequence_1",
         "additional_quantity_fee_string&Sequence_1",
         "total_additional_fee&Sequence_1",

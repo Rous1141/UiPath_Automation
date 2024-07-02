@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1138.4,3544.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1138.4,3512.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="603.2,3480" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="603.2,3448" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_scrapped_pdf" />
       <Variable x:TypeArguments="x:String" Name="pdf_file_name" />
@@ -123,6 +123,7 @@
       <Variable x:TypeArguments="x:Double" Name="invoice_grant_total" />
       <Variable x:TypeArguments="x:Double" Name="total_service_fee" />
       <Variable x:TypeArguments="x:Double" Name="total_additional_fee" />
+      <Variable x:TypeArguments="x:String" Name="formated_date" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -202,14 +203,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Sequence sap2010:Annotation.AnnotationText="What putted on the queue item is pure string data that may require to be converted into the correct data to put into Excel File. This is messy since we need to remove the comma &quot;,&quot; and the tailing numbers. Then punch the data into a workflow to calculate the final sum.&#xD;&#xA;Also changing the date format to fit the desired output" DisplayName="Data Conversion And Count The Grant Total Fee" sap:VirtualizedContainerService.HintSize="540.8,1187.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="What putted on the queue item is pure string data that may require to be converted into the correct data to put into Excel File. This is messy since we need to remove the comma &quot;,&quot; and the tailing numbers. Then punch the data into a workflow to calculate the final sum.&#xA;Also changing the date format to fit the desired output" DisplayName="Data Conversion And Count The Grant Total Fee" sap:VirtualizedContainerService.HintSize="540.8,1187.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="service_unit_price_double" />
         <Variable x:TypeArguments="x:Double" Name="service_unit_price" />
         <Variable x:TypeArguments="x:Double" Name="service_quantity" />
         <Variable x:TypeArguments="x:Double" Name="additional_unit_price" />
         <Variable x:TypeArguments="x:Double" Name="additional_quantity" />
-        <Variable x:TypeArguments="x:String" Name="formated_date" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -322,7 +322,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ClearDataTable>
-    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {pdf_file_name,invoice_date,invoice_number,invoice_bill_name,total_service_fee,total_additional_fee,invoice_grant_total}]" DataTable="[dt_scrapped_pdf]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="540.8,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() {pdf_file_name,formated_date,invoice_number,invoice_bill_name,total_service_fee,total_additional_fee,invoice_grant_total}]" DataTable="[dt_scrapped_pdf]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="540.8,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>

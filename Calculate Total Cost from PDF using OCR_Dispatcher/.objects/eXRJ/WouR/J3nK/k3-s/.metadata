@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Check App State Adobe Acrobat",
+  "Type": "Element",
+  "Id": "k3-sY_yMG0ej57gh3OxJyw",
+  "Reference": "2bnrn-eJm06qzGN0TkYgCw/k3-sY_yMG0ej57gh3OxJyw",
+  "ParentRef": "2bnrn-eJm06qzGN0TkYgCw/J3nK48aE2kqUpQ6LUBUTxQ",
+  "Created": "2024-07-02T02:44:46.4304937Z",
+  "Updated": "2024-07-02T02:44:46.4304937Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

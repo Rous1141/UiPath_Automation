@@ -53,7 +53,6 @@
       "Path": "Framework/GetTransactionData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "variable1&Sequence_13",
         "number_failed_files&Sequence_1",
         "number_of_files&Sequence_1",
         "count_&Sequence_1"
@@ -74,6 +73,8 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "number_failed_files&Sequence_9",
+        "variable1&Sequence_8",
         "variable1&TryCatch_1",
         "additional_unit_price&TryCatch_1",
         "additional_service_quantity&TryCatch_1",
