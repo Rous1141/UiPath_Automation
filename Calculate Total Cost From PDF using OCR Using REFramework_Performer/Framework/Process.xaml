@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="603.2,3448" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="603.2,3636" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_scrapped_pdf" />
       <Variable x:TypeArguments="x:String" Name="pdf_file_name" />
@@ -132,7 +132,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="540.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="540.8,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:Comment sap2010:Annotation.AnnotationText="1. Getting and assigning the QueueItems to your local variable.&#xD;&#xA;2. Converting some data from string to double and integer or date accordingly&#xD;&#xA;3. Invoking a subSequence to calculate the total of &quot;Service Fee&quot;, &quot;Additional Fee&quot; and &quot;Grand Total Fee&quot;&#xD;&#xA;4. Put all the data into a table row&#xD;&#xA;5. Save the row into the Excel File&#xD;&#xA;*Note: If this is the first transaction, a header is also created in the excel file" DisplayName="Comment Step by Step" sap:VirtualizedContainerService.HintSize="540.8,260" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Comment>
     <ui:MultipleAssign DisplayName="Multiple Assigning Data From Queue To Local Vars" sap:VirtualizedContainerService.HintSize="540.8,367.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
@@ -203,7 +209,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Sequence sap2010:Annotation.AnnotationText="What putted on the queue item is pure string data that may require to be converted into the correct data to put into Excel File. This is messy since we need to remove the comma &quot;,&quot; and the tailing numbers. Then punch the data into a workflow to calculate the final sum.&#xA;Also changing the date format to fit the desired output" DisplayName="Data Conversion And Count The Grant Total Fee" sap:VirtualizedContainerService.HintSize="540.8,1187.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="What putted on the queue item is string data that may require to be converted into the correct data to put into Excel File. This is messy since we need to remove the comma &quot;,&quot; and the tailing numbers in the &quot;unit price&quot; items. Then punch the data into a workflow to calculate the final sum.&#xA;Also changing the date format to fit the desired output Date (mm/dd/yyyy)" DisplayName="Data Conversion And Count The Grant Total Fee" sap:VirtualizedContainerService.HintSize="540.8,1203.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="service_unit_price_double" />
         <Variable x:TypeArguments="x:Double" Name="service_unit_price" />
@@ -282,7 +288,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Passing the data to this file to calculate the grand total price" DisplayName="Calculate Total Amount" sap:VirtualizedContainerService.HintSize="478.4,241.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CalculateTotalAmount.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Passing the data to this subSequnce to calculate the grand total price, and other total fees" DisplayName="Calculate Total Amount" sap:VirtualizedContainerService.HintSize="478.4,241.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CalculateTotalAmount.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:Double" x:Key="in_service_unit_price">[service_unit_price]</InArgument>
           <InArgument x:TypeArguments="x:Double" x:Key="in_service_quantity">[service_quantity]</InArgument>
