@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Click 'msedge.exe ACME'",
+  "Type": "Element",
+  "Id": "T4Ljno1rn0OBE-iK1bPziA",
+  "Reference": "x8kpwhPUoECZUu_L6vLskQ/T4Ljno1rn0OBE-iK1bPziA",
+  "ParentRef": "x8kpwhPUoECZUu_L6vLskQ/Xr2tUwoBrESTKMuvlbO4Lg",
+  "Created": "2024-07-20T12:43:33.0360196Z",
+  "Updated": "2024-07-20T12:43:33.0360196Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

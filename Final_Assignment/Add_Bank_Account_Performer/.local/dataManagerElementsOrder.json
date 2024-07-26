@@ -1,0 +1,258 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "placeholder_file&Sequence_32",
+        "Active_Transaction&StateMachine_1",
+        "test_queue&Sequence_4",
+        "list_temp_password&StateMachine_1",
+        "folder_exist&Sequence_32",
+        "file_exist&Sequence_32",
+        "SendMail_Confirmation&State_5",
+        "zipped_content&State_5",
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Transaction_first_name",
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bank_name&Sequence_2",
+        "temporary_password&Sequence_2",
+        "acme_session&Sequence_2",
+        "city_state_zip&Sequence_1",
+        "dependents&Sequence_1",
+        "age&Sequence_1",
+        "email&Sequence_1",
+        "phone&Sequence_1",
+        "first_name&Sequence_1",
+        "last_name&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_temp_password_list",
+        "in_TransactionNumber",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LoginACME.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "is_appear&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_browser_url",
+        "in_acme_password",
+        "in_acme_email"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CreateBankAccount.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dashboard_url&Sequence_1",
+        "dependents&Sequence_1",
+        "email&Sequence_1",
+        "phone&Sequence_1",
+        "age&Sequence_1",
+        "city_state_zip&Sequence_1",
+        "last_name&Sequence_1",
+        "first_name&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dependents",
+        "in_age",
+        "in_email",
+        "in_phone",
+        "in_city_state_zip",
+        "in_lastname",
+        "in_firstname"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CreateTemporaryPassword.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "password_length&Sequence_1",
+        "list_temp_password&Sequence_2",
+        "newPassword&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_total_password",
+        "in_browser_url",
+        "out_temp_password"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DownloadTemplate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "download_folder&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ggdrive_url",
+        "in_first_name",
+        "in_template_file_name",
+        "in_Input_Folder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CustomizeDocTemplate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "new_docx_name&Sequence_2",
+        "Microsoft_Word_path&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_bank_name",
+        "in_email",
+        "in_Input_Folder",
+        "in_template_name",
+        "in_first_name",
+        "in_last_name",
+        "in_temp_password",
+        "in_Output_Folder",
+        "in_PDF_Output_Folder",
+        "in_city_state_zip",
+        "in_age",
+        "in_phone",
+        "in_dependents"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "out_temp_password&Sequence_4",
+        "newPassword&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "total_transaction&Sequence_9",
+        "new_item&Sequence_9",
+        "variable1&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_temporary_password_list",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "process_list&Sequence_2",
+        "Chrome_Browser&Sequence_2",
+        "Edge_Browser&Sequence_2",
+        "Microsoft_Word&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

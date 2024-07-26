@@ -1,0 +1,16 @@
+﻿{
+  "Name": "ACME System 1 - Dashboard",
+  "Type": "Screen",
+  "Id": "Xr2tUwoBrESTKMuvlbO4Lg",
+  "Reference": "x8kpwhPUoECZUu_L6vLskQ/Xr2tUwoBrESTKMuvlbO4Lg",
+  "ParentRef": "x8kpwhPUoECZUu_L6vLskQ/EBDXPAj6AEmATWNRKMJMZQ",
+  "Created": "2024-07-20T12:43:32.8365495Z",
+  "Updated": "2024-07-20T13:00:37.561372Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
